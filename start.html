@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Pelagia</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="surparallel, sur, parallel, pelagia">
+  <meta content="" name="This is the homepage about Pelagia project made by Surparallel laboratory">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Ruda:400,900,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/prettyphoto/css/prettyphoto.css" rel="stylesheet">
+  <link href="lib/hover/hoverex-all.css" rel="stylesheet">
+  <link href="lib/jetmenu/jetmenu.css" rel="stylesheet">
+  <link href="lib/owl-carousel/owl-carousel.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/colors/blue.css">
+</head>
+
+<body>
+  <div class="topbar clearfix">
+    <div class="container">
+      <div class="col-lg-12 text-right">
+        <div class="social_buttons">
+          <a href="#" data-toggle="tooltip" data-placement="bottom" title="Github"><i class="fa fa-github"></i></a>
+          <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>
+          <a href="#" data-toggle="tooltip" data-placement="bottom" title="Google+"><i class="fa fa-google-plus"></i></a>
+          <a href="#" data-toggle="tooltip" data-placement="bottom" title="Dribbble"><i class="fa fa-dribbble"></i></a>
+          <a href="#" data-toggle="tooltip" data-placement="bottom" title="RSS"><i class="fa fa-rss"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- end container -->
+  </div>
+  <!-- end topbar -->
+
+  <header class="header">
+    <div class="container">
+      <div class="site-header clearfix">
+        <div class="col-lg-3 col-md-3 col-sm-12 title-area">
+          <div class="site-title social_buttons" id="title">
+          	<img src="img/favicon.png" alt="" >
+            <a href="index.html" title="">
+            <h4>PEL<span>AGIA</span></h4>
+            </a>
+          </div>
+        </div>
+        <!-- title area -->
+        <div class="col-lg-9 col-md-12 col-sm-12">
+          <div id="nav" class="right">
+            <div class="container clearfix">
+              <ul id="jetmenu" class="jetmenu blue">
+                <li><a href="about.html">about</a></li>
+                <li><a href="start.html">get start</a></li>
+                <li><a href="download.html">download</a></li>
+                <li><a href="documentation.html">documentation</a></li>
+                <li><a href="community.html">community</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- nav -->
+        </div>
+        <!-- title area -->
+      </div>
+      <!-- site header -->
+    </div>
+    <!-- end container -->
+  </header>
+  <!-- end header -->
+ <section class="section1">
+    <div class="container clearfix">
+      <div class="content col-lg-12 col-md-12 col-sm-12 clearfix">
+        <h2>Pelagia Getting Started Guide</h2>
+		<div class="clearfix"></div>
+        <blockquote>          
+          <cite title="Source Title">introduce</cite>
+        </blockquote>
+        <div class="clearfix"></div>
+        <p>I joined an online game company in 2008. Engaged in the development of game server. The company has developed a very successful game with 20 million registered users. It has an operation time of up to 5 years. The server uses a very old technology called MudOS, which can be traced back to the 1980s when the DOS system was just emerging.</p>
+        <p>Server architecture is composed of network system, script system and database. There is only one thread in the whole system, which is responsible for handling all game logic and events. During the long operation period, the game content is continuously increased. The company has developed a large number of tasks and NPCs with story backgrounds. For example, new year's celebration, Christmas celebration and so on. These games are packed in a thread like canned sardine. The server constantly checks the current time and user status to determine whether it is triggered. This leads to inefficient servers.</p>
+        <p>I feel subconsciously that every task in this packed sardine can be relatively independent. But it is very difficult to separate them completely. There are all kinds of dependence between them. They need to share data with each other and repel each other. I began to try various ways to get them out of the crowded cans. Run in a separate thread. But research has been intermittent because of the busy work.</p>
+        <p>Until the global experience of blockchain storm in 2019, I finally had the opportunity to relax and start to collate the research data accumulated over the years. In the process of sorting out, I found some interesting things. I wrote a paper about AP &amp; RP technology and published it on CodeProject. In the process of exploring technology and the truth behind it, I found a rule. Human engineering products always use complex technology to improve efficiency to help people reduce time or other costs. The same is true of software parallelism. There is no single solution to solve the parallel problem of software. Under the premise that it is impossible to eliminate software execution dependency and data dependency. A series of more complex methods are needed to make sequential software parallel. This also includes sacrificing part of the performance in exchange for software parallelism. It includes the cost of thread lock, transaction integrity, data cache, etc.</p>
+        <p>After finishing a series of theoretical research. Making a tool can help people use the minimum performance loss to complete the software parallelization has become my new goal. Pelagia is the first tool to help people develop parallel software. Call it an engine or a virtual machine. In a word, I want you to parallelize the software in a very simple and relaxing way. The whole process should be simple, continuous, direct and transparent. In addition to running much faster, you should not even feel how the software is parallelized. This allows us to enjoy the fun of development just like developing Hello world for the first time.</p>
+        		<div class="clearfix"></div>
+        <blockquote>          
+          <cite title="Source Title">Environmental installation</cite>
+        </blockquote>
+        <div class="clearfix"></div>
+        <p>Install on Linux system</p>
+        <p>Linux &amp; Mac installation is very simple, just download the source package and decompress and compile it on the terminal. This article uses version 0.1 for installation：</p>
+        
+ <pre class="prettyprint lang-bsh">curl -R -O http://www.....
+tar zxf ....
+cd pelagia/src
+make linux
+make install</pre>
+<p>Install on Mac OS X</p>
+<pre class="prettyprint lang-bsh">curl -R -O http://www.....
+tar zxf ....
+cd pelagia/src
+make macosx 
+make install
+</pre>
+<p>Install on window system</p>
+<p>After decompression, enter the msvcs directory and open pelagia.sln for compilation.</p>
+		<div class="clearfix"></div>
+        <blockquote>          
+          <cite title="Source Title">Simple running example</cite>
+        </blockquote>
+        <div class="clearfix"></div>
+<p>Let's look at a simple example. How to use Pelagia in an embedded way in C language. You can find this example in simple. c under the directory src.</p>
+<pre class="prettyprint lang-c++">
+1.	static int TaskRouting(char* value, short valueLen) {  
+2.	    void* pEvent;  
+3.	    memcpy(&pEvent, value, valueLen);  
+4.	  
+5.	    char table[256] = { 0 };  
+6.	    sprintf(table, "table");  
+7.	  
+8.	    char key[256] = { 0 };  
+9.	    sprintf(key, "key");  
+10.	  
+11.	    char v[256] = { 0 };  
+12.	    sprintf(v, "hello world!");  
+13.	  
+14.	    //Set data to data  
+15.	    plg_JobSet(table, strlen(table), key, strlen(key), v, strlen(v) + 1);  
+16.	    unsigned int len = 0, error = 1;  
+17.	  
+18.	    //get data  
+19.	    void* ptr = plg_JobGet(table, strlen(table), key, strlen(key), &len);  
+20.	    if (ptr) {  
+21.	        printf("%s\n", ptr);  
+22.	        free(ptr);  
+23.	    }  
+24.	  
+25.	    plg_EventSend(pEvent, NULL, 0);  
+26.	    printf("-----------------job all pass!-----------------\n");  
+27.	    return 1;  
+28.	}  
+29.	  
+30.	void test_simple1() {  
+31.	  
+32.	    printf("\n-----------------manage create!-----------------\n");  
+33.	    //Create system handle  
+34.	    void* pManage = plg_MngCreateHandle(0, 0);  
+35.	    //Create a message handle to receive messages  
+36.	    void* pEvent = plg_EventCreateHandle();  
+37.	      
+38.	    //Add a task to the system, including the name of the task and the callback function.  
+39.	    char order[256] = { 0 };  
+40.	    sprintf(order, "order");  
+41.	    plg_MngAddOrder(pManage, order, strlen(order), plg_JobCreateFunPtr(TaskRouting));  
+42.	  
+43.	    //Add the table to be written by the task. The read table can be read without adding  
+44.	    //Each table is an independent key-value database  
+45.	    char table[256] = { 0 };  
+46.	    sprintf(table, "table");  
+47.	    plg_MngAddTable(pManage, order, strlen(order), table, strlen(table));  
+48.	  
+49.	    //Create resources used by threads and assign tasks to threads  
+50.	    plg_MngAllocJob(pManage, 1);  
+51.	    //Create thread environment  
+52.	    plg_MngStarJob(pManage);  
+53.	  
+54.	    //Trigger the task and use the event handle as a parameter  
+55.	    plg_MngRemoteCall(pManage, order, strlen(order), (char*)&pEvent, sizeof(void*));  
+56.	  
+57.	    //Wait for task return event  
+58.	    plg_EventWait(pEvent);  
+59.	  
+60.	    //Extract events from queue  
+61.	    unsigned int eventLen;  
+62.	    void * ptr = plg_EventRecvAlloc(pEvent, &eventLen);  
+63.	    plg_EventFreePtr(ptr);  
+64.	  
+65.	    //Finish  
+66.	    plg_EventDestroyHandle(pEvent);  
+67.	    plg_MngDestoryHandle(pManage, 0, 0);  
+68.	    printf("\n-----------------manage destroy!-----------------\n");  
+69.	  
+70.	}  
+</pre>
+<p>This example shows how to use Pelagia when you have a task, a table, and a thread. When you have multiple tasks and multiple tables that need to run on multiple threads. You can easily change to a multithreaded environment by modifying the parameter core in the plg_MngAllocJob. Pelagia will automatically assign your tasks to different threads.</p>
+<div class="clearfix"></div>
+        <blockquote>          
+          <cite title="Source Title">Purpose of using Pelagia</cite>
+        </blockquote>
+        <div class="clearfix"></div>
+        <p>As we all know, it is very difficult to develop a parallel software. First of all, there are many concepts and knowledge points of parallelism. Secondly, even if we master a large number of parallel concepts, the operation of parallel mode is very prone to errors. The reason for this error is that the execution of parallel software needs to coordinate a large number of sequence problems to ensure that the logic of execution is correct. This makes it difficult to avoid mistakes even if you are proficient in parallel knowledge. This kind of multi task coordination leads to errors in the form of accidental errors. The erratic way it happens makes it very difficult to deal with. In the environment of multi person development, this situation will become more difficult to control. So we rarely see complex parallel software. </p>
+        <p>How to make parallel software development easier, we need to start from two points. First, reduce the amount of knowledge to learn parallel software. Second, how to avoid people manually adjusting the execution order of software in parallel environment. So we use the concept of sequential virtual machine. The concept of sequential virtual machine is that users only need to master basic software development knowledge. In the virtual machine, we use a series of methods to let the user's software automatically adjust the execution order. By simulating the sequential execution environment, the threshold of parallel software development can be reduced. Reduce software parallel errors caused by human factors. What's more exciting is that the efficiency of software can be greatly improved by software parallelization.</p>
+        <p>The principle of sequential virtual machine is very simple. Software developed in any language consists of a large number of functions. These functions are executed in a particular order in a single threaded environment. This order depends on the environment and the user's execution request for the software. The input and output data of these functions are written to the shared area. Each function can read and write these shared data when it executes. We want to improve the running efficiency of single thread software, the simplest way is to split the software into multiple threads. Use sequential virtual machine according to preset function characteristics. Assign functions to different execution threads. And through each function to read and write the different needs of the data for appropriate allocation. Finally, different functions are run in different threads without changing the software structure. But in the end, how many copies of software can be distributed? It depends on the number of threads and the density of shared data used by the software.</p>
+        <p>To divide the maximum number of concurrent software, the most important thing is to see the software's reading and writing to the shared data area. So you can think of Pelagia as a system of multiple read-write locks. The system will create read-write locks according to the requirements of thread allocation. Therefore, each function should additionally mark the data it writes, as the basis for dividing system threads. The whole development process can be simply described as. Write the function, call the system interface storage for the data to be stored, call the system interface to describe the data written by the function, and then trigger the function execution.</p>
+        <div class="clearfix"></div>
+        <blockquote>          
+          <cite title="Source Title">Parallelization of software</cite>
+        </blockquote>
+        <div class="clearfix"></div>
+        <p>Pelagia is a development tool that can parallelize software automatically. We usually use multithreaded development library to realize the parallel function of software. As described earlier, software parallel libraries are a very bad development experience. Every developer has its own implementation. It is difficult to develop, test and maintain. But the efficiency improvement brought by software parallelization is what every project is eager for. We all hope that the software can meet the needs of users in the shortest time. It began almost at the time of the birth of the computer. Numerous software engineers began to try to parallelize the software automatically. But they all ended in failure. Until the birth of Pelagia made a fundamental turning point.</p>
+        <p>The latest attempt to parallelize software is to use message mechanism. It is the way of message and function callback represented by go and nodejs. The callback function in the thread pool is activated by a message. A function usually performs three steps: reading data, calculating and writing data. Usually, such a development architecture is around functions and messages. The private data for each function is protected by the message mechanism. If we look at the process from a different perspective. Go back to sharing data between threads. It is also a process of multiple threads competing for shared data. It can be seen that in the automatic parallelization of software, data sharing between threads cannot be bypassed.</p>
+       
+                <div class="item active">
+                  <img src="img/doc1.jpg" alt="" width="500" height="300">
+                </div>
+        <p>The way of bundling function and data in message mechanism reduces the difficulty of parallel software development to a certain extent. But it still can't solve the problem of granularity. With the increase of functions, a large amount of data that has been privatized and has not been privatized needs to be maintained. Whether and to what extent data will be privatized becomes difficult to control. Another problem emerges. With the increase of threads, the data contention between threads will become more and more obvious. Threads have to wait for each other to share data. The finer the data partition, the more difficult it is to control, and the coarser the data partition will cause threads to wait for each other. This software parallelization has entered a dilemma.</p>
+        <p>The problem of software parallelization comes down to data partition. In order to get the best parallel performance, we need to partition the data as detailed as possible. How to divide the data as detailed as possible. First of all, we need to understand the impact of function usage data process on software parallelization. People who have used git software will understand. The behavior of submitting code has a profound impact on data. It will affect all relevant developers. Data reading has no effect on other users. This is the AP&RP principle of data transmission process in parallelization. According to this principle, we can further divide the data into read data and written data. So we can break through the limit of current data division and further refine the data.</p>
+        <div class="item active">
+                  <img src="img/doc2.jpg" alt="" width="500" height="300">
+                </div>
+        <p>Each thread operates on shared data only when reading or writing data. It can maximize the use efficiency of shared data. Greatly reduce the waiting time between threads.</p>
+        <p>Because of the tag of using data behavior, we get whether the function has the attribute of writing data. Because writing data has a decisive influence on the parallelization of software. With this property, we can classify functions with write behavior. The classified function becomes a transaction safe function. Transaction security means that functions will not have thread deadlock and data confusion. Function after obtaining transaction security. We can further allocate the cache of data used by the function according to the data used by the function. Because the data used by the function is read from the hard disk. Huge hard disk data can not be extracted into memory. Therefore, when partitioning data in parallel environment, corresponding cache should be generated. Pelagia has completed a series of automatic configuration from function, data, thread, cache and hard disk. The user only needs to set the number of threads needed in the running state. Pelagia can automatically create, allocate and run all resources.</p>
+       <div class="clearfix"></div>
+        <blockquote>          
+          <cite title="Source Title">System overview</cite>
+        </blockquote>
+        <div class="clearfix"></div> 
+      <p>The whole system consists of four levels, management module, sequential virtual machine, cache, disk and other devices. The user calls the functions running in the sequential virtual machine through the management module. The function commits the relevant data to the cache when it executes. After the user completes the execution, the data is submitted to the hard disk or other devices by the cache. Functions executed within the virtual machine share data with each other through caching. Functions in the virtual machine can also call each other.</p>
+      <div class="item active">
+                  <img src="img/doc3.jpg" alt="" width="500" height="300">
+                </div>
+                <p>Although the system is composed of multiple sequential virtual machines, users do not need to know which virtual machine the function is running on. Although the system consists of multiple caches, users do not need to know which cache the data is stored in. As long as the user specifies the name of the running function, the system will help the user find the appropriate virtual machine to execute. As long as the user specifies the key of the data, the system will query the data in the specified cache and return it to the user. In the eyes of users, the software is like running in a single threaded environment. This environment consists of two parts: function calling system and data storage system. The whole system is asynchronous to improve efficiency, and there are several short-term and controllable synchronous ways to ensure the integrity of data. Users only need to follow the requirements of the system to set the way of using data. The system can help users to make appropriate thread allocation. There is no need for users to care about how to allocate and protect data in parallel mode.</p>
+      <div class="clearfix"></div>
+        <blockquote>          
+          <cite title="Source Title">Functional characteristics</cite>
+        </blockquote>
+        <div class="clearfix"></div> 
+     <p>1)Easy to use, easy to use, as long as basic programming knowledge can be easily used.</p>
+<p>2)Proper use can greatly improve the efficiency of software operation.</p>
+<p>3)Multiple isolation and protection of data can effectively prevent improper use of data in the process of team development.</p>
+<p>4)Written in C language, it has powerful portability and can be applied to multiple platforms.</p>
+<p>5)Support the extension of C, C + +, Lua and other languages.</p>
+<p>6)The function of data processing is rich.</p>
+
+<div class="clearfix"></div>
+        <blockquote>          
+          <cite title="Source Title">Concept definition</cite>
+        </blockquote>
+        <div class="clearfix"></div> 
+
+<p>Virtual sequential environment: describes that the software developed by users can switch between parallel and sequential environments without any change.</p>
+<p>Allocation tense: the process of analyzing user's software requirements and allocating resources when user software is not running.</p>
+<p>Runtime: after resource allocation, start user software. Users are not allowed to change the software during runtime.</p>
+<p>Data sharing, exclusive sharing, sharing, hard disk sharing: whether the data used by each function in user software can be accessed by other functions is called data sharing. Data that can only be used by the current function during this call is called exclusive data. Data that can be used by the current function or other functions during runtime is called shared data. Data recorded to the hard disk that can be used in multiple runtime States is called hard disk sharing.</p>
+<p>Task call: trigger function in user software is called task call. Task invocation can be divided into two situations, one is outside the virtual sequential environment, the other is inside the virtual sequential environment.</p>
+<p>Environment isolation: user tasks actually run in different threads, and scripting languages such as Lua even run in multiple LVMs.</p>
+<p>Implicit transaction: each user task will not be formally submitted to the database until the end of operation. Task data at run time cannot be read by other tasks.</p>
+<p>Read write decision: the system assigns threads, caches, and routes to user tasks according to the user's behavior of using data (read or write).</p>
+
+<div class="clearfix"></div>
+        <blockquote>          
+          <cite title="Source Title">A detailed explanation of the concept</cite>
+        </blockquote>
+        <div class="clearfix"></div> 
+     <p>Virtual sequential environment is the most important concept in Pelagia system. The primary goal of Pelagia design is to switch order and concurrent environment without users' awareness. Users program and debug in sequential environment and run in concurrent environment. Users can continuously adjust the software channel to find the best performance according to the running situation. </p> 
+     <p>In the actual operation process, it can be divided into distribution time and operation time. The allocation temporal takes the software developed by users as the analysis target. The analysis results are used to adjust the parameters of software parallel temporal. Users can set parameters in runtime according to these data. For the best parallel efficiency. Software is not inherently parallel. Whether it can be parallel or not is determined by the data reading and writing behavior of the software. The maximum number of software parallelizable in basic data depends on the division of software tasks. We usually divide software into multiple functions. But in theory, it is also possible to put all software functions in one function. When all software functions are put in one function, the maximum number of parallelizable software is 1. When the software is divided into multiple functions, the maximum number of parallelizable functions depends on the data reading and writing behavior of each function. If both functions write the same data, they cannot be parallel. If both functions only read the same data, then the two functions can be parallel.</p> 
+     <p>Calls outside the virtual sequential environment in task calls will communicate through the event network and Io. Its form includes blocking and non blocking. Blocking mode will cause virtual machine to be stuck, and non blocking mode will result in data call failure. The system is not too involved in the behavior of whether users produce data blocking. Because blocking and non blocking are fuzzy in themselves. Blocking in seconds and blocking in milliseconds can be called blocking, but the result is totally different. It depends more on how the third party feels. In the future, the system may give suggestions in this regard. For example, some operating system functions may cause too long blocking time. Calling any operating system function is not currently prohibited.</p> 
+     <p>We know that Pelagia is a parallel system composed of multiple threads. And support Lua and other scripting languages. Pelagia's approach is to create a language virtual machine within each thread. Instead of creating multiple threads within the language virtual machine. So it's called environmental isolation system. Note that this results in each language virtual machine being unable to share global data. This pattern obviously leads to the probability of low-level errors for novices. Since every language emphasizes the harm of using global data. It would also be useful to move this from a proposal to a rule.</p> 
+     <p>Transactions are very important in parallel systems. It is a design to ensure data integrity and consistency. Pelagia adopts a strategy of implicit transaction. That is, the task execution period is considered as a complete transaction. When the task is completed, the transaction executed this time will be submitted automatically. The user can also choose to abort the commit or roll back.</p>
+     <p>Read and write data of user task is the only basis for judging task parallelism, also known as read and write decision. It may include multiple tasks writing the same data or multiple tasks reading the same data. It also includes multiple data written by one task or multiple data read by one task. Even a mixture of these. Including multiple data read or written by multiple tasks. In order to prevent users from getting into confusion, users only need to analyze the situation that each task reads and writes data separately during configuration. And use JSON or API for explanation. This is similar to the framework, which requires an additional specification for each task. It can be JSON or calling API directly.</p>
+     <div class="clearfix"></div>
+        <blockquote>          
+          <cite title="Source Title">Examples of finite elements</cite>
+        </blockquote>
+        <div class="clearfix"></div>
+         <p>In the last simple example, we showed how to use Pelagia under 1 task, 1 table and 1 thread. Here we use a pseudo-random finite element simulation to show how to use Pelagia in a multithreaded environment. Finite element simulation is usually used to calculate the pressure model of building or machinery. For example, when a point in the building is affected by a force, it will spread to the surrounding points. This finite element simulation is used as an example.</p>
+        
+        <div class="item active">
+                  <img src="img/doc4.jpg" alt="" width="500" height="300">
+                </div>
+            <p>First we create 10 points. When a point is affected by force, it will suffer a random damage. At the same time, another point is chosen randomly and a new force is generated until the damage value of a building is zero.</p>
+      <p>First create 10 point initialization task.</p>
+ <pre class="prettyprint lang-c++">
+1.	for (int i = 0; i &#60; 10; i++) {
+2.	  
+3.	    char order[10] = { 0 };  
+4.	    sprintf(order, "i%d", i);  
+5.	    plg_MngAddOrder(pManage, order, strlen(order), plg_JobCreateFunPtr(InitRouting));  
+6.	  
+7.	    char table[10] = { 0 };  
+8.	    sprintf(table, "t%d", i);  
+9.	    plg_MngAddTable(pManage, order, strlen(order), table, strlen(table));  
+10.	}  
+ </pre>            
+   <p>Then create a numeric manipulation function for 10 points.</p>
+   <pre class="prettyprint lang-c++">
+ 1.	for (int i = 0; i &#60; 10; i++) {  
+2.	  
+3.	    char order[10] = { 0 };  
+4.	    sprintf(order, "o%d", i);  
+5.	    plg_MngAddOrder(pManage, order, strlen(order), plg_JobCreateFunPtr(TestRouting));  
+6.	  
+7.	    char table[10] = { 0 };  
+8.	    sprintf(table, "t%d", i);  
+9.	    plg_MngAddTable(pManage, order, strlen(order), table, strlen(table));  
+10.	}  
+   </pre>
+   <p>Then start the thread. Here we set the number of threads to 2.</p>
+  <pre class="prettyprint lang-c++">
+1.	plg_MngPrintAllStatus(pManage);  
+2.	plg_MngAllocJob(pManage, 2);  
+3.	plg_MngPrintAllJobStatus(pManage);  
+4.	//   plg_MngPrintAllJobDetails(pManage);  
+5.	plg_MngStarJob(pManage); 
+  </pre>
+  <p>Trigger initialization task.</p>
+  <pre class="prettyprint lang-c++">
+1.	for (int i = 0; i &#60; 10; i++) {  
+2.	  
+3.	    char order[10] = { 0 };  
+4.	    sprintf(order, "i%d", i);  
+5.	    Param param;  
+6.	    param.i = i;  
+7.	    param.pEvent = pEvent;  
+8.	    plg_MngRemoteCall(pManage, order, strlen(order), (char*)¶m, sizeof(Param));  
+9.	} 
+  </pre>
+  <p>The initialization of 10 points will be set to 100 in the initialization task.</p>
+  <pre class="prettyprint lang-c++">
+1.	static int InitRouting(char* value, short valueLen) {  
+2.	  
+3.	    PParam pParam = (PParam)value;  
+4.	    printf("---InitRouting--%d-\n", pParam-&#62;i);  
+5.	      
+6.	    char table[256] = { 0 };  
+7.	    sprintf(table, "t%d", pParam-&#62;i);  
+8.	  
+9.	    short count = 100;  
+10.	    plg_JobSet(table, strlen(table), "count", strlen("count"), &#38;count, sizeof(short));  
+11.	  
+12.	    return 1;  
+13.	}   
+  </pre>
+  <p>Then apply a force to each and trigger the action to deduct damage.</p>
+  <pre class="prettyprint lang-c++">
+1.	for (int i = 0; i &#61; 10; i++) {  
+2.	  
+3.	    char order[10] = { 0 };  
+4.	    sprintf(order, "o%d", i);  
+5.	    Param param;  
+6.	    param.i = i;  
+7.	    param.pEvent = pEvent;  
+8.	    param.dmage = 1;  
+9.	    plg_MngRemoteCall(pManage, order, strlen(order), (char*)¶m, sizeof(Param));  
+10.	}
+  </pre>
+  <p>Before deducting the damage value, check whether there are zero damage points in all points. If there is a point with zero damage, stop transferring.</p>
+  <pre class="prettyprint lang-c++">
+1.	for (int i = 0; i &#61; 10; i++)  
+2.	{  
+3.	    short count;  
+4.	    char table[10] = { 0 };  
+5.	    sprintf(table, "t%d", i);  
+6.	  
+7.	    unsigned int len = 0, error = 1;  
+8.	    void* ptr = plg_JobGet(table, strlen(table), "count", strlen("count"), &#38;len);  
+9.	  
+10.	    if (ptr) {  
+11.	        count = *(short*)ptr;  
+12.	        free(ptr);  
+13.	  
+14.	        if (count &#61; 0) {  
+15.	            return 1;  
+16.	        }  
+17.	    }
+  </pre>
+  <p>Then get the damage value of the current point and cut off the damage. Then randomly find the next point and generate a new damage value. And pass it out through plg_JobRemoteCall.</p>
+<pre class="prettyprint lang-c++">
+1.	unsigned int len = 0, error = 1;  
+2.	void* ptr = plg_JobGet(table, strlen(table), "count", strlen("count"), &#38;len);  
+3.	  
+4.	if (ptr) {  
+5.	    count = *(short*)ptr;  
+6.	    free(ptr);  
+7.	  
+8.	    count -= pParam-&#62;dmage;    
+9.	    plg_JobSet(table, strlen(table), "count", strlen("count"), &#38;count, sizeof(short));  
+10.	    if (count &#61; 0) {  
+11.	        //all pass  
+12.	        plg_EventSend(pParam-&#62;pEvent, NULL, 0);  
+13.	        printf("job all pass!\n");  
+14.	    } else {  
+15.	          
+16.	        int c = rand()%10;  
+17.	        if (pParam-&#62;i== 10) {  
+18.	            c--;  
+19.	        } else if (pParam-&#62;i == c) {  
+20.	            c++;  
+21.	        }  
+22.	  
+23.	        char order[10] = { 0 };  
+24.	        sprintf(order, "o%d", c);  
+25.	        pParam-&#62;i = c;  
+26.	        pParam-&#62;dmage = rand() % 1?2:5;  
+27.	        plg_JobRemoteCall(order, strlen(order), (char*)pParam, sizeof(Param));  
+28.	    }  
+29.	}  
+</pre>
+<p>We can run him to get results.</p>
+<div class="item active">
+                  <img src="img/doc5.jpg" alt="" width="500" height="300">
+                </div>
+                <div class="item active">
+                  <img src="img/doc6.jpg" alt="" width="500" height="300">
+                </div>
+  <p>You can increase the running speed by adjusting the number of threads needed through the plg_MngAllocjob function.</p>
+        <div class="clearfix"></div>
+        <blockquote>          
+          <cite title="Source Title">Deadlock and Pelagia's task assignment principle</cite>
+        </blockquote>
+        <div class="clearfix"></div>
+        <p>If you have rich experience in development, you will be very confused. How does Pelagia assign tasks to multiple threads without thread deadlock or other multithreading problems.</p> 
+            <p>Consider the condition of deadlock yield. Suppose we have data a and data B. And there are task X and task y. So if task X and y are running in different threads respectively. Then x gets a and tries to access B, and Y gets B tries to access a. Then x, y will deadlock. At this time, if we put x, y back into a thread for serial execution, the deadlock problem will disappear. Pelagia is to execute tasks with deadlock possibility serially and tasks without deadlock possibility parallelly according to the situation of task usage data. We need to read and write data when we use it. Pelagia sees the need for the same data to be read and write as writing. When Pelagia's a, B data is used b y x, y tasks, the list of all possibilities for thread allocation is as follows. </p> 
+            <div class="item active">
+                  <img src="img/doc7.jpg" alt="" width="500" height="300">
+                </div>
+                <p>So for the most part, Pelagia can assign multitasking and data systems to different threads. To improve the efficiency of the overall operation of the system.</p>
+        <blockquote>          
+          <cite title="Source Title">Conclusion</cite>
+        </blockquote>
+  <p>Pelagia is a very interesting tool. Since the birth of computer system, we know little about parallel system. In the absence of sufficient theoretical and tool support. The development of parallel system is very difficult. Pelagia will help people develop parallel systems from a new perspective. You can download and try to run the example first. You can find us at surparallel.org or github.com if you have any problems.</p>           
+ <!-- end content -->
+       </div>  
+     
+    </div>
+    <!-- end container -->
+  </section>
+  <!-- end section -->
+
+  <footer class="footer">
+  
+    <!-- end container -->
+    <div class="copyrights">
+      <div class="container">
+        <div class="col-lg-6 col-md-6 col-sm-12 columns footer-left">
+          <p>Copyright © 2019 - 2020 surparallel.org - All rights reserved.</p>
+        </div>
+
+        <!-- end large-6 -->
+      </div>
+      <!-- end container -->
+    </div>
+    <!-- end copyrights -->
+  </footer>
+  <!-- end footer -->
+  <div class="dmtop">Scroll to Top</div>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/php-mail-form/validate.js"></script>
+  <script src="lib/prettyphoto/js/prettyphoto.js"></script>
+  <script src="lib/isotope/isotope.min.js"></script>
+  <script src="lib/hover/hoverdir.js"></script>
+  <script src="lib/hover/hoverex.min.js"></script>
+  <script src="lib/unveil-effects/unveil-effects.js"></script>
+  <script src="lib/owl-carousel/owl-carousel.js"></script>
+  <script src="lib/jetmenu/jetmenu.js"></script>
+  <script src="lib/animate-enhanced/animate-enhanced.min.js"></script>
+  <script src="lib/jigowatt/jigowatt.js"></script>
+  <script src="lib/easypiechart/easypiechart.min.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
