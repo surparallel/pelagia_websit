@@ -28,6 +28,13 @@
   <link href="css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="css/colors/blue.css">
   
+  <!-- google-code-prettify -->
+   <style>
+  li.L0, li.L1, li.L2, li.L3,li.L5, li.L6, li.L7, li.L8{ list-style-type: decimal !important }
+  </style>
+  <link href="lib/google-code-prettify/prettify.css" type="text/css" rel="stylesheet"/>
+  <script type="text/javascript" src="lib/google-code-prettify/prettify.js"></script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159851491-1"></script>
 <script>
@@ -39,7 +46,7 @@
 </script>
 </head>
 
-<body>
+<body onload="prettyPrint()">
   <div class="topbar clearfix">
     <div class="container">
       <div class="col-lg-12 text-right">
@@ -111,14 +118,14 @@
         <p>Install on Linux system</p>
         <p>Linux &amp; Mac installation is very simple, just download the source package and decompress and compile it on the terminal. This article uses version 0.1 for installation：</p>
         
- <pre class="prettyprint lang-bsh">curl -R -O http://www.....
-tar zxf ....
+ <pre class="prettyprint lang-bsh">curl -R -O http://www...
+tar zxf ...
 cd pelagia/src
 make linux
 make install</pre>
 <p>Install on Mac OS X</p>
-<pre class="prettyprint lang-bsh">curl -R -O http://www.....
-tar zxf ....
+<pre class="prettyprint lang-bsh">curl -R -O http://www...
+tar zxf ...
 cd pelagia/src
 make macosx 
 make install
@@ -131,77 +138,76 @@ make install
         </blockquote>
         <div class="clearfix"></div>
 <p>Let's look at a simple example. How to use Pelagia in an embedded way in C language. You can find this example in simple. c under the directory src.</p>
-<pre class="prettyprint lang-c++">
-1.	static int TaskRouting(char* value, short valueLen) {  
-2.	    void* pEvent;  
-3.	    memcpy(&pEvent, value, valueLen);  
-4.	  
-5.	    char table[256] = { 0 };  
-6.	    sprintf(table, "table");  
-7.	  
-8.	    char key[256] = { 0 };  
-9.	    sprintf(key, "key");  
-10.	  
-11.	    char v[256] = { 0 };  
-12.	    sprintf(v, "hello world!");  
-13.	  
-14.	    //Set data to data  
-15.	    plg_JobSet(table, strlen(table), key, strlen(key), v, strlen(v) + 1);  
-16.	    unsigned int len = 0, error = 1;  
-17.	  
-18.	    //get data  
-19.	    void* ptr = plg_JobGet(table, strlen(table), key, strlen(key), &len);  
-20.	    if (ptr) {  
-21.	        printf("%s\n", ptr);  
-22.	        free(ptr);  
-23.	    }  
-24.	  
-25.	    plg_EventSend(pEvent, NULL, 0);  
-26.	    printf("-----------------job all pass!-----------------\n");  
-27.	    return 1;  
-28.	}  
-29.	  
-30.	void test_simple1() {  
-31.	  
-32.	    printf("\n-----------------manage create!-----------------\n");  
-33.	    //Create system handle  
-34.	    void* pManage = plg_MngCreateHandle(0, 0);  
-35.	    //Create a message handle to receive messages  
-36.	    void* pEvent = plg_EventCreateHandle();  
-37.	      
-38.	    //Add a task to the system, including the name of the task and the callback function.  
-39.	    char order[256] = { 0 };  
-40.	    sprintf(order, "order");  
-41.	    plg_MngAddOrder(pManage, order, strlen(order), plg_JobCreateFunPtr(TaskRouting));  
-42.	  
-43.	    //Add the table to be written by the task. The read table can be read without adding  
-44.	    //Each table is an independent key-value database  
-45.	    char table[256] = { 0 };  
-46.	    sprintf(table, "table");  
-47.	    plg_MngAddTable(pManage, order, strlen(order), table, strlen(table));  
-48.	  
-49.	    //Create resources used by threads and assign tasks to threads  
-50.	    plg_MngAllocJob(pManage, 1);  
-51.	    //Create thread environment  
-52.	    plg_MngStarJob(pManage);  
-53.	  
-54.	    //Trigger the task and use the event handle as a parameter  
-55.	    plg_MngRemoteCall(pManage, order, strlen(order), (char*)&pEvent, sizeof(void*));  
-56.	  
-57.	    //Wait for task return event  
-58.	    plg_EventWait(pEvent);  
-59.	  
-60.	    //Extract events from queue  
-61.	    unsigned int eventLen;  
-62.	    void * ptr = plg_EventRecvAlloc(pEvent, &eventLen);  
-63.	    plg_EventFreePtr(ptr);  
-64.	  
-65.	    //Finish  
-66.	    plg_EventDestroyHandle(pEvent);  
-67.	    plg_MngDestoryHandle(pManage, 0, 0);  
-68.	    printf("\n-----------------manage destroy!-----------------\n");  
-69.	  
-70.	}  
+<pre class="prettyprint lang-c linenums">
+    static int TaskRouting(char* value, short valueLen) {
+        void* pEvent = (void*)value;
+    
+        char table[10] = { 0 };
+        strcpy(table, "table");
+    
+        char key[10] = { 0 };
+        strcpy(key, "key");
+    
+        char v[100] = { 0 };
+        strcpy(v, "hello world!");
+    
+        //Set data to data
+        plg_JobSet(table, strlen(table), key, strlen(key), v, strlen(v) + 1);
+        unsigned int len = 0;
+    
+        //get data
+        void* ptr = plg_JobGet(table, strlen(table), key, strlen(key), &#38;len);
+        if (ptr) {
+            printf("%s\n", (char*)ptr);
+            free(ptr);
+        }
+    
+        plg_EventSend(pEvent, NULL, 0);
+        printf("-----------------job all pass!-----------------\n");
+        return 1;
+    }
+    
+    void plg_simple() {
+    
+        printf("\n-----------------manage create!-----------------\n");
+        //Create system handle
+        void* pManage = plg_MngCreateHandle(0, 0);
+        //Create a message handle to receive messages
+        void* pEvent = plg_EventCreateHandle();
+        
+        //Add a task to the system, including the name of the task and the callback function.
+        char order[10] = { 0 };
+        strcpy(order, "order");
+        plg_MngAddOrder(pManage, order, strlen(order), plg_JobCreateFunPtr(TaskRouting));
+    
+        //Add the table to be written by the task. The read table can be read without adding
+        //Each table is an independent key-value database
+        char table[10] = { 0 };
+        strcpy(table, "table");
+        plg_MngAddTable(pManage, order, strlen(order), table, strlen(table));
+    
+        //Create resources used by threads and assign tasks to threads
+        plg_MngAllocJob(pManage, 1);
+        //Create thread environment
+        plg_MngStarJob(pManage);
+    
+        //Trigger the task and use the event handle as a parameter
+        plg_MngRemoteCall(pManage, order, strlen(order), (char*)&#38;pEvent, sizeof(void*));
+    
+        //Wait for task return event
+        plg_EventWait(pEvent);
+    
+        //Extract events from queue
+        unsigned int eventLen;
+        void * ptr = plg_EventRecvAlloc(pEvent, &#38;eventLen);
+        plg_EventFreePtr(ptr);
+    
+        //Finish
+        plg_EventDestroyHandle(pEvent);
+        plg_MngDestoryHandle(pManage, 0, 0);
+        printf("\n-----------------manage destroy!-----------------\n");
+    
+    }
 </pre>
 <p>This example shows how to use Pelagia when you have a task, a table, and a thread. When you have multiple tasks and multiple tables that need to run on multiple threads. You can easily change to a multithreaded environment by modifying the parameter core in the plg_MngAllocJob. Pelagia will automatically assign your tasks to different threads.</p>
 <div class="clearfix"></div>
@@ -291,131 +297,130 @@ make install
                 </div>
             <p>First we create 10 points. When a point is affected by force, it will suffer a random damage. At the same time, another point is chosen randomly and a new force is generated until the damage value of a building is zero.</p>
       <p>First create 10 point initialization task.</p>
- <pre class="prettyprint lang-c++">
-1.	for (int i = 0; i &#60; 10; i++) {
-2.	  
-3.	    char order[10] = { 0 };  
-4.	    sprintf(order, "i%d", i);  
-5.	    plg_MngAddOrder(pManage, order, strlen(order), plg_JobCreateFunPtr(InitRouting));  
-6.	  
-7.	    char table[10] = { 0 };  
-8.	    sprintf(table, "t%d", i);  
-9.	    plg_MngAddTable(pManage, order, strlen(order), table, strlen(table));  
-10.	}  
+ <pre class="prettyprint lang-c++ linenums">
+	for (int i = 0; i &#60; 10; i++) {
+	  
+	    char order[10] = { 0 };  
+	    sprintf(order, "i%d", i);  
+	    plg_MngAddOrder(pManage, order, strlen(order), plg_JobCreateFunPtr(InitRouting));  
+	  
+	    char table[10] = { 0 };  
+	    sprintf(table, "t%d", i);  
+	    plg_MngAddTable(pManage, order, strlen(order), table, strlen(table));  
+	}  
  </pre>            
    <p>Then create a numeric manipulation function for 10 points.</p>
-   <pre class="prettyprint lang-c++">
- 1.	for (int i = 0; i &#60; 10; i++) {  
-2.	  
-3.	    char order[10] = { 0 };  
-4.	    sprintf(order, "o%d", i);  
-5.	    plg_MngAddOrder(pManage, order, strlen(order), plg_JobCreateFunPtr(TestRouting));  
-6.	  
-7.	    char table[10] = { 0 };  
-8.	    sprintf(table, "t%d", i);  
-9.	    plg_MngAddTable(pManage, order, strlen(order), table, strlen(table));  
-10.	}  
+   <pre class="prettyprint lang-c linenums">
+	for (int i = 0; i &#60; 10; i++) {  
+	  
+	    char order[10] = { 0 };  
+	    sprintf(order, "o%d", i);  
+	    plg_MngAddOrder(pManage, order, strlen(order), plg_JobCreateFunPtr(TestRouting));  
+	  
+	    char table[10] = { 0 };  
+	    sprintf(table, "t%d", i);  
+	    plg_MngAddTable(pManage, order, strlen(order), table, strlen(table));  
+	}  
    </pre>
    <p>Then start the thread. Here we set the number of threads to 2.</p>
-  <pre class="prettyprint lang-c++">
-1.	plg_MngPrintAllStatus(pManage);  
-2.	plg_MngAllocJob(pManage, 2);  
-3.	plg_MngPrintAllJobStatus(pManage);  
-4.	//   plg_MngPrintAllJobDetails(pManage);  
-5.	plg_MngStarJob(pManage); 
+  <pre class="prettyprint lang-c linenums">
+	plg_MngPrintAllStatus(pManage);  
+	plg_MngAllocJob(pManage, 2);  
+	plg_MngPrintAllJobStatus(pManage);  
+	plg_MngStarJob(pManage); 
   </pre>
   <p>Trigger initialization task.</p>
-  <pre class="prettyprint lang-c++">
-1.	for (int i = 0; i &#60; 10; i++) {  
-2.	  
-3.	    char order[10] = { 0 };  
-4.	    sprintf(order, "i%d", i);  
-5.	    Param param;  
-6.	    param.i = i;  
-7.	    param.pEvent = pEvent;  
-8.	    plg_MngRemoteCall(pManage, order, strlen(order), (char*)¶m, sizeof(Param));  
-9.	} 
+  <pre class="prettyprint lang-c linenums">
+	for (int i = 0; i &#60; 10; i++) {  
+	  
+	    char order[10] = { 0 };  
+	    sprintf(order, "i%d", i);  
+	    Param param;  
+	    param.i = i;  
+	    param.pEvent = pEvent;  
+	    plg_MngRemoteCall(pManage, order, strlen(order), (char*)¶m, sizeof(Param));  
+	} 
   </pre>
   <p>The initialization of 10 points will be set to 100 in the initialization task.</p>
-  <pre class="prettyprint lang-c++">
-1.	static int InitRouting(char* value, short valueLen) {  
-2.	  
-3.	    PParam pParam = (PParam)value;  
-4.	    printf("---InitRouting--%d-\n", pParam-&#62;i);  
-5.	      
-6.	    char table[256] = { 0 };  
-7.	    sprintf(table, "t%d", pParam-&#62;i);  
-8.	  
-9.	    short count = 100;  
-10.	    plg_JobSet(table, strlen(table), "count", strlen("count"), &#38;count, sizeof(short));  
-11.	  
-12.	    return 1;  
-13.	}   
+  <pre class="prettyprint lang-c linenums">
+	static int InitRouting(char* value, short valueLen) {  
+	  
+	    PParam pParam = (PParam)value;  
+	    printf("---InitRouting--%d-\n", pParam-&#62;i);  
+	      
+	    char table[256] = { 0 };  
+	    sprintf(table, "t%d", pParam-&#62;i);  
+	  
+	    short count = 100;  
+	    plg_JobSet(table, strlen(table), "count", strlen("count"), &#38;count, sizeof(short));  
+	  
+	    return 1;  
+	}    
   </pre>
   <p>Then apply a force to each and trigger the action to deduct damage.</p>
-  <pre class="prettyprint lang-c++">
-1.	for (int i = 0; i &#61; 10; i++) {  
-2.	  
-3.	    char order[10] = { 0 };  
-4.	    sprintf(order, "o%d", i);  
-5.	    Param param;  
-6.	    param.i = i;  
-7.	    param.pEvent = pEvent;  
-8.	    param.dmage = 1;  
-9.	    plg_MngRemoteCall(pManage, order, strlen(order), (char*)¶m, sizeof(Param));  
-10.	}
+  <pre class="prettyprint lang-c linenums">
+	for (int i = 0; i &#61; 10; i++) {  
+	  
+	    char order[10] = { 0 };  
+	    sprintf(order, "o%d", i);  
+	    Param param;  
+	    param.i = i;  
+	    param.pEvent = pEvent;  
+	    param.dmage = 1;  
+	    plg_MngRemoteCall(pManage, order, strlen(order), (char*)¶m, sizeof(Param));  
+	}
   </pre>
   <p>Before deducting the damage value, check whether there are zero damage points in all points. If there is a point with zero damage, stop transferring.</p>
-  <pre class="prettyprint lang-c++">
-1.	for (int i = 0; i &#61; 10; i++)  
-2.	{  
-3.	    short count;  
-4.	    char table[10] = { 0 };  
-5.	    sprintf(table, "t%d", i);  
-6.	  
-7.	    unsigned int len = 0, error = 1;  
-8.	    void* ptr = plg_JobGet(table, strlen(table), "count", strlen("count"), &#38;len);  
-9.	  
-10.	    if (ptr) {  
-11.	        count = *(short*)ptr;  
-12.	        free(ptr);  
-13.	  
-14.	        if (count &#61; 0) {  
-15.	            return 1;  
-16.	        }  
-17.	    }
+  <pre class="prettyprint lang-c linenums">
+	for (int i = 0; i &#61; 10; i++)  
+	{  
+	    short count;  
+	    char table[10] = { 0 };  
+	    sprintf(table, "t%d", i);  
+	  
+	    unsigned int len = 0, error = 1;  
+	    void* ptr = plg_JobGet(table, strlen(table), "count", strlen("count"), &#38;len);  
+	  
+	    if (ptr) {  
+	        count = *(short*)ptr;  
+	        free(ptr);  
+	  
+	        if (count &#61; 0) {  
+	            return 1;  
+	        }  
+	    }
   </pre>
   <p>Then get the damage value of the current point and cut off the damage. Then randomly find the next point and generate a new damage value. And pass it out through plg_JobRemoteCall.</p>
-<pre class="prettyprint lang-c++">
-1.	unsigned int len = 0, error = 1;  
-2.	void* ptr = plg_JobGet(table, strlen(table), "count", strlen("count"), &#38;len);  
-3.	  
-4.	if (ptr) {  
-5.	    count = *(short*)ptr;  
-6.	    free(ptr);  
-7.	  
-8.	    count -= pParam-&#62;dmage;    
-9.	    plg_JobSet(table, strlen(table), "count", strlen("count"), &#38;count, sizeof(short));  
-10.	    if (count &#61; 0) {  
-11.	        //all pass  
-12.	        plg_EventSend(pParam-&#62;pEvent, NULL, 0);  
-13.	        printf("job all pass!\n");  
-14.	    } else {  
-15.	          
-16.	        int c = rand()%10;  
-17.	        if (pParam-&#62;i== 10) {  
-18.	            c--;  
-19.	        } else if (pParam-&#62;i == c) {  
-20.	            c++;  
-21.	        }  
-22.	  
-23.	        char order[10] = { 0 };  
-24.	        sprintf(order, "o%d", c);  
-25.	        pParam-&#62;i = c;  
-26.	        pParam-&#62;dmage = rand() % 1?2:5;  
-27.	        plg_JobRemoteCall(order, strlen(order), (char*)pParam, sizeof(Param));  
-28.	    }  
-29.	}  
+<pre class="prettyprint lang-c linenums">
+	unsigned int len = 0, error = 1;  
+	void* ptr = plg_JobGet(table, strlen(table), "count", strlen("count"), &#38;len);  
+	  
+	if (ptr) {  
+	    count = *(short*)ptr;  
+	    free(ptr);  
+	  
+	    count -= pParam-&#62;dmage;    
+	    plg_JobSet(table, strlen(table), "count", strlen("count"), &#38;count, sizeof(short));  
+	    if (count &#61; 0) {  
+	        //all pass  
+	        plg_EventSend(pParam-&#62;pEvent, NULL, 0);  
+	        printf("job all pass!\n");  
+	    } else {  
+	          
+	        int c = rand()%10;  
+	        if (pParam-&#62;i== 10) {  
+	            c--;  
+	        } else if (pParam-&#62;i == c) {  
+	            c++;  
+	        }  
+	  
+	        char order[10] = { 0 };  
+	        sprintf(order, "o%d", c);  
+	        pParam-&#62;i = c;  
+	        pParam-&#62;dmage = rand() % 1?2:5;  
+	        plg_JobRemoteCall(order, strlen(order), (char*)pParam, sizeof(Param));  
+	    }  
+	}  
 </pre>
 <p>We can run him to get results.</p>
 <div class="item active">
