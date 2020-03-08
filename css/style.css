@@ -861,8 +861,8 @@ body.nobg .section1 {
 }
 
 .section5 {
-  background: #c6c6c6;
-  padding: 30px 0;
+	background: linear-gradient(to bottom,#005490,#000513);
+	padding: 30px 0;
 }
 
 .section5 h4 {
