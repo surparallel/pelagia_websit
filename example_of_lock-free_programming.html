@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Pelagia</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="surparallel, sur, parallel, pelagia">
+  <meta content="" name="This is the homepage about Pelagia project made by Surparallel laboratory">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Ruda:400,900,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/prettyphoto/css/prettyphoto.css" rel="stylesheet">
+  <link href="lib/hover/hoverex-all.css" rel="stylesheet">
+  <link href="lib/jetmenu/jetmenu.css" rel="stylesheet">
+  <link href="lib/owl-carousel/owl-carousel.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/colors/blue.css">
+  
+  <!-- google-code-prettify -->
+   <style>
+  li.L0, li.L1, li.L2, li.L3,li.L5, li.L6, li.L7, li.L8{ list-style-type: decimal !important }
+  </style>
+  <link href="lib/google-code-prettify/prettify.css" type="text/css" rel="stylesheet"/>
+  <script type="text/javascript" src="lib/google-code-prettify/prettify.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-159851491-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-159851491-1');
+</script>
+</head>
+
+<body onload="prettyPrint()">
+  <div class="topbar clearfix">
+    <div class="container">
+      <div class="col-lg-12 text-right">
+        <div class="social_buttons">
+          <a href="https://github.com/surparallel/pelagia" data-toggle="tooltip" data-placement="bottom" title="Github"><i class="fa fa-github"></i></a>
+          <a href="https://github.com/surparallel/pelagia" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>
+          <a href="https://github.com/surparallel/pelagia" data-toggle="tooltip" data-placement="bottom" title="Google+"><i class="fa fa-google-plus"></i></a>
+          <a href="https://github.com/surparallel/pelagia" data-toggle="tooltip" data-placement="bottom" title="Dribbble"><i class="fa fa-dribbble"></i></a>
+          <a href="https://github.com/surparallel/pelagia" data-toggle="tooltip" data-placement="bottom" title="RSS"><i class="fa fa-rss"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- end container -->
+  </div>
+  <!-- end topbar -->
+
+  <header class="header">
+    <div class="container">
+      <div class="site-header clearfix">
+        <div class="col-lg-3 col-md-3 col-sm-12 title-area">
+          <div class="site-title social_buttons" id="title">
+          	<img src="img/favicon.png" alt="" >
+            <a href="index.html" title="">
+            <h4>PEL<span>AGIA</span></h4>
+            </a>
+          </div>
+        </div>
+        <!-- title area -->
+        <div class="col-lg-9 col-md-12 col-sm-12">
+          <div id="nav" class="right">
+            <div class="container clearfix">
+              <ul id="jetmenu" class="jetmenu blue">
+                <li><a href="about.html">about</a></li>
+                <li><a href="start.html">get start</a></li>
+                <li><a href="download.html">download</a></li>
+                <li><a href="documentation.html">documentation</a></li>
+                <li><a href="community.html">community</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- nav -->
+        </div>
+        <!-- title area -->
+      </div>
+      <!-- site header -->
+    </div>
+    <!-- end container -->
+  </header>
+  <!-- end header -->
+ <section class="section1">
+    <div class="container clearfix">
+      <div class="content col-lg-12 col-md-12 col-sm-12 clearfix">
+        <h2>Example of lock-free programming</h2>
+        <p>Today I will introduce a new technology of lock-free programming.</p>
+        <p>In DDJ pearls of concurrency, herb Sutter puts forward three simple arguments of lock-free programming: one is to separate tasks and use more fine-grained lock or unlocked programming; the other is to use CPU resources as much as possible through parallel tasks to improve system throughput and scalability; the third is to ensure the consistency of access to shared resources</p>
+        <p>I'll use Pelagia to show you how to lock-free.Pelagia is a lock-free programming suite from surparallel.org.Traditional lockless programming requires users to master complex multithreading knowledge. Pelagia uses advanced technology from sequential virtual machines. So that users can develop multithreaded software with basic programming knowledge.</p>
+		<div class="clearfix"></div>
+        <blockquote>          
+          <cite title="Source Title">Configuration environment</cite>
+        </blockquote>
+        <div class="clearfix"></div>
+        <b>Install build environment.</b>
+        <p>Pelagia needs GCC to support C99. Please update GCC to a newer version.</p>
+        <b>download&amp;Compile</b>
+        <p>Go to the download page on the official website https://surparallel.org/. Find the latest download, this is using Pelagia 0.3.</p>
+        <p>Using tar to decompress</p>
+        <pre class="prettyprint lang-bsh">
+        tar zxf pelagia-release_src_0.3.tar.gz
+        </pre>
+        <p>Go to the Pelagia/src directory</p>
+        <pre class="prettyprint lang-bsh">
+        cd pelagia/src
+        </pre>
+        <p>Compiling with the make command</p>
+        <pre class="prettyprint lang-bsh">
+        make linux
+        </pre>
+        <p>We will get pelagia.so and Pelagia. Start Pelagia with the command.</p>
+        <pre class="prettyprint lang-bsh">
+        ./pelagia
+        </pre>
+        <p>Input command simple,We'll get "Hello world!"</p>
+        <pre class="prettyprint lang-bsh">
+        simple
+        </pre>
+        <div class="clearfix"></div>
+        <blockquote>          
+          <cite title="Source Title">Example explanation</cite>
+        </blockquote>
+        <div class="clearfix"></div>  
+        <p>We can find the sample file psimple under pelagia/src.</p>
+        <p>In the example, there are two functions: plg_simple and taskrouting.</p>
+        <p>Plg_simple is the main function, which is responsible for configuring the environment and starting the service.</p>
+        <p><b>Taskrouting</b> is a user task, dealing with user functions.</p>
+        <p>There are three parts in <b>plg_simple</b> that need to be modified by the user.</p>
+        <p></p>
+        <pre class="prettyprint lang-c linenums">
+        char order[10] = { 0 };
+        strcpy(order, "order");
+        plg_MngAddOrder(pManage, order, strlen(order), plg_JobCreateFunPtr(TaskRouting));
+        </pre>
+        <p>Add task: Here we add a task named order. The processing function of the task is taskrouting.</p>
+        <p>Then we add a table named table for this task.</p>
+        <pre class="prettyprint lang-c linenums">
+        char table[10] = { 0 };
+		strcpy(table, "table");
+		plg_MngAddTable(pManage, order, strlen(order), table, strlen(table));
+   		</pre>
+        <p>Then we allocate the thread pool, and here we create one thread.</p>
+        <pre class="prettyprint lang-c linenums">
+        plg_MngAllocJob(pManage, 1);
+        </pre>
+        <p>Then start the system and trigger the call to this task.</p>
+        <pre class="prettyprint lang-c linenums">
+        plg_MngRemoteCall(pManage, order, strlen(order), (char*)&pEvent, sizeof(void*));
+        
+        Next, in the task started. We set variable V to table.
+        
+        char table[10] = { 0 };
+        strcpy(table, "table");
+        
+        char key[10] = { 0 };
+        strcpy(key, "key");
+        
+        char v[100] = { 0 };
+        strcpy(v, "hello world!");
+        
+        //Set data to table
+        plg_JobSet(table, strlen(table), key, strlen(key), v, strlen(v) + 1);
+        </pre>
+        <p>And call plg_JobGet function to get this variable. And print the results to the screen.</p>
+        <div class="clearfix"></div>
+        <blockquote>          
+         <cite title="Source Title">Modification example</cite>
+        </blockquote>
+        <div class="clearfix"></div>        
+        <p>Let's modify this example a little bit to make it multithreaded.</p>   
+        <p>First we add taskrouting2. Reading data in table in taskrouting2.</p>
+        <pre class="prettyprint lang-c linenums">
+        static int TaskRouting2(char* value, short valueLen) {
+            void* pEvent;
+            memcpy(&#38;pEvent, value, valueLen);
+        
+            char table[10] = { 0 };
+            strcpy(table, "table");
+        
+            char key[10] = { 0 };
+            strcpy(key, "key");
+        
+            unsigned int len = 0;
+            //get data
+            void* ptr = plg_JobGet(table, strlen(table), key, strlen(key), &#38;len);
+            if (ptr) {
+                printf("%s\n", (char*)ptr);
+                free(ptr);
+            }
+        
+            plg_EventSend(pEvent, NULL, 0);
+            printf("-----------------job all pass!-----------------\n");
+            return 1;
+        }       
+        </pre>
+        <p>Then we name taskrouting2 order2 and add it to the system.</p>
+        <pre class="prettyprint lang-c linenums">
+        strcpy(order, "order2");
+		plg_MngAddOrder(pManage, order, strlen(order), plg_JobCreateFunPtr(TaskRouting2));
+        </pre>
+        <p>And modify taskrouting1 to call order2 instead of exiting after taskrouting1 runs.</p>
+        <pre class="prettyprint lang-c linenums">
+        char order[10] = { 0 };
+        strcpy(order, "order2");
+        plg_JobRemoteCall(order, strlen(order), value, valueLen);    
+        </pre>
+        <p>Then change the core parameter of to 2, indicating that you want to start two threads.</p>
+        <pre class="prettyprint lang-c linenums">
+         plg_MngAllocJob(pManage, 2);
+        </pre>
+        <p>The execution order changes to plg_simple calling Order1, Order1 calling order2, and then returning to the main function to finish execution. The results are as follows.</p>
+        <img src="img/compiling_pelagia_in_linux1.jpg" alt="" width="500" height="300">
+
+        <p>We have two outputs that we expect.Using <b>plg_MngPrintallJobOrder(pManage);</b> you can see that two orders are configured into different threads respectively.</p>
+        <img src="img/compiling_pelagia_in_linux2.jpg" alt="" width="500" height="300">
+        <p>Here you have completed the first lock-free programming.You can find all the examples in <b>src/psimple.c</b>.</p>
+        
+ 	</div>
+    </div>
+    <!-- end container -->
+  </section>
+  <!-- end section -->
+
+  <footer class="footer">
+  
+    <!-- end container -->
+    <div class="copyrights">
+      <div class="container">
+        <div class="col-lg-6 col-md-6 col-sm-12 columns footer-left">
+          <p>Copyright © 2019 - 2020 surparallel.org - All rights reserved.</p>
+        </div>
+
+        <!-- end large-6 -->
+      </div>
+      <!-- end container -->
+    </div>
+    <!-- end copyrights -->
+  </footer>
+  <!-- end footer -->
+  <div class="dmtop">Scroll to Top</div>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/php-mail-form/validate.js"></script>
+  <script src="lib/prettyphoto/js/prettyphoto.js"></script>
+  <script src="lib/isotope/isotope.min.js"></script>
+  <script src="lib/hover/hoverdir.js"></script>
+  <script src="lib/hover/hoverex.min.js"></script>
+  <script src="lib/unveil-effects/unveil-effects.js"></script>
+  <script src="lib/owl-carousel/owl-carousel.js"></script>
+  <script src="lib/jetmenu/jetmenu.js"></script>
+  <script src="lib/animate-enhanced/animate-enhanced.min.js"></script>
+  <script src="lib/jigowatt/jigowatt.js"></script>
+  <script src="lib/easypiechart/easypiechart.min.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
