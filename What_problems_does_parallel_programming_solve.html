@@ -149,7 +149,7 @@
         } 
 
         </pre>
-        <p>It takes 1.36 seconds on my computer.</p>
+        <p>It takes <b>1.36</b> seconds on my computer.</p>
         <p>The first 5 and the last 5 of the array are calculated respectively. That is, the software is divided into two parallel parts.</p>
         <pre class="prettyprint lang-c linenums">
           #include &#60;stdio.h&#62;
@@ -195,12 +195,12 @@
           }
 
         </pre>
-        <p>The computation time is 0.695 seconds, and the time of multithreading is about half less than that of single thread./p>
+        <p>The computation time is <b>0.695</b> seconds, and the time of multithreading is about half less than that of single thread./p>
         <p>It's known from Amdahl 's law.</p>
         <p>Because our program is two parts that can be parallel completely, so the parallel ratio a is 1. If the number of threads n is 2, the theoretical acceleration ratio can be calculated as follows.</p>
 
-        <p>S = 1/(1-1+1/2) = 2</p>
-        <p>It is similar to our acceleration ratio test result of 1.36 / 0.695 = 1.95./p>
+        <p><b>S = 1/(1-1+1/2) = 2</b></p>
+        <p>It is similar to our acceleration ratio test result of <b>1.36 / 0.695 = 1.95</b>.</p>
         <p>If we compute the parts of arrays 0 through 5 twice. The parts from 0 to 5 become two serial operations.</p>
         <pre class="prettyprint lang-c linenums">
           int main()
@@ -255,15 +255,15 @@
           }
 
         </pre>
-        <p>The operation time of multithreading is 1.37 seconds.</p>
-        <p>The operation time in single thread mode is 2 seconds.</p>
+        <p>The operation time of multithreading is <b>1.37</b> seconds.</p>
+        <p>The operation time in single thread mode is <b>2</b> seconds.</p>
         <p>According to Amdahl's law, the acceleration ratio of the test condition is.</p>
-        <p>2.0 / 1.37 = 1.45</p>
+        <p><b>2.0 / 1.37 = 1.45</b></p>
         <p>Substituting 1.45 into Amdahl 's formula to obtain the parallel proportion of the experiment.</p>
-        <p>1.45 = 1/(1-a+a/2)</p>
-        <p>a = 0.62</p>
+        <p><b>1.45 = 1/(1-a+a/2)</b></p>
+        <p><b>a = 0.62</b></p>
         <p>Because it's two parallel operations, one serial operation.</p>
-        <p>The parallel ratio of our theory is 2 / 3 = 0.666.</p>
+        <p>The parallel ratio of our theory is <b>2 / 3 = 0.666</b>.</p>
         <p>Now we know that parallel programming is a method of splitting software into different hardware according to parallel proportion. And know how to calculate the parallel acceleration ratio through Amdahl theorem and the method of reverse calculating the parallel proportion of software.</p>
  	</div>
     </div>
