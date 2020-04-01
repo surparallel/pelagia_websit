@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Pelagia</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="surparallel, sur, parallel, pelagia">
+  <meta content="" name="This is the homepage about Pelagia project made by Surparallel laboratory">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Ruda:400,900,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/prettyphoto/css/prettyphoto.css" rel="stylesheet">
+  <link href="lib/hover/hoverex-all.css" rel="stylesheet">
+  <link href="lib/jetmenu/jetmenu.css" rel="stylesheet">
+  <link href="lib/owl-carousel/owl-carousel.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/colors/blue.css">
+  
+  <!-- google-code-prettify -->
+   <style>
+  li.L0, li.L1, li.L2, li.L3,li.L5, li.L6, li.L7, li.L8{ list-style-type: decimal !important }
+  </style>
+  <link href="lib/google-code-prettify/prettify.css" type="text/css" rel="stylesheet"/>
+  <script type="text/javascript" src="lib/google-code-prettify/prettify.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-159851491-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-159851491-1');
+</script>
+</head>
+
+<body onload="prettyPrint()">
+  <div class="topbar clearfix">
+    <div class="container">
+      <div class="col-lg-12 text-right">
+        <div class="social_buttons">
+          <a href="https://github.com/surparallel/pelagia" data-toggle="tooltip" data-placement="bottom" title="Github"><i class="fa fa-github"></i></a>
+          <a href="https://github.com/surparallel/pelagia" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>
+          <a href="https://github.com/surparallel/pelagia" data-toggle="tooltip" data-placement="bottom" title="Google+"><i class="fa fa-google-plus"></i></a>
+          <a href="https://github.com/surparallel/pelagia" data-toggle="tooltip" data-placement="bottom" title="Dribbble"><i class="fa fa-dribbble"></i></a>
+          <a href="https://github.com/surparallel/pelagia" data-toggle="tooltip" data-placement="bottom" title="RSS"><i class="fa fa-rss"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- end container -->
+  </div>
+  <!-- end topbar -->
+
+  <header class="header">
+    <div class="container">
+      <div class="site-header clearfix">
+        <div class="col-lg-3 col-md-3 col-sm-12 title-area">
+          <div class="site-title social_buttons" id="title">
+          	<img src="img/favicon.png" alt="" >
+            <a href="index.html" title="">
+            <h4>PEL<span>AGIA</span></h4>
+            </a>
+          </div>
+        </div>
+        <!-- title area -->
+        <div class="col-lg-9 col-md-12 col-sm-12">
+          <div id="nav" class="right">
+            <div class="container clearfix">
+              <ul id="jetmenu" class="jetmenu blue">
+                <li><a href="about.html">about</a></li>
+                <li><a href="start.html">get start</a></li>
+                <li><a href="download.html">download</a></li>
+                <li><a href="documentation.html">documentation</a></li>
+                <li><a href="community.html">community</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- nav -->
+        </div>
+        <!-- title area -->
+      </div>
+      <!-- site header -->
+    </div>
+    <!-- end container -->
+  </header>
+  <!-- end header -->
+ <section class="section1">
+    <div class="container clearfix">
+      <div class="content col-lg-12 col-md-12 col-sm-12 clearfix">
+                  <h2 class="title">
+                    	<span>What Problems Does Parallel Programming Solve?</span>
+                    </h2>
+        <p>We are all learning parallel programming or distributed programming.</p>
+        <p>But what problems are parallel programming or distributed programming solving??????</p>
+        <p>Software development can be seen as composed of numerous functions and data structures.</p>
+        <p>When the software is running, various status data will be generated. So if we have more than one computer.</p>
+        <p>How to distribute the software evenly among these computers?</p>
+        <p>This is the problem of parallel programming or distributed programming.</p>
+        <p>So there's Amdahl 's law.</p>
+        <p><b>S=1/(1-a+a/n)</b>></p>
+        <p>a is represents the proportion of software parallel part.</p>
+        <p>n is the number of computers.</p>
+        <p>S is the acceleration ratio of parallel software.</p>
+        <p>In this way, when 1-a = 0, (i.e. no serial, only parallel), the maximum acceleration ratio S = n; when a = 0 (i.e. only serial, no parallel), the minimum acceleration ratio S = 1; when n →∞, the limit acceleration ratio s → 1 / (1-a), which is the upper limit of the acceleration ratio.</p>
+        <p>That is to say, part of our software is parallel at runtime. The other part is serial. The parallel part can be put into any computer. The serial part needs to be concentrated on one computer. For programming, threads can be regarded as a virtual computing environment.</p>
+        <p>So the parallel problem becomes how to assign software to threads. And the answer is very obvious. Find the parallel part and the serial part of the software. Put the serial part into single thread, and the parallel part into some threads according to the number of parallel parts.</p>
+        <p>First, write a simple program to calculate 100000 operations, and then put the results into the array output.</p>
+        <pre class="prettyprint lang-c linenums">
+        
+        #include &#60;stdio.h&#62;
+        #include &#60;stdlib.h&#62;
+        #include &#60;pthread.h&#62;
+           
+        unsigned long long arr[10] = { 0 };
+        void *sumtovec(void* p) 
+        {
+          for (int i = 0; i &#60; 10; i++) {
+            
+            unsigned long long c = 1;
+            for (unsigned long long j = 1; j &#60; 10000000; j++) {
+                c += (c * ~i) % j;
+              }
+              arr[i] = c;
+            }
+            return NULL;
+        }
+          
+        int main()
+        {
+          sumtovec(0);
+          
+          for (int i = 0; i &#60; 10; i++) {
+            printf("output:%llu\n", arr[i]);
+          }
+          getchar(stdin);
+          return 0;
+        } 
+
+        </pre>
+        <p>It takes 1.36 seconds on my computer.</p>
+        <p>The first 5 and the last 5 of the array are calculated respectively. That is, the software is divided into two parallel parts.</p>
+        <pre class="prettyprint lang-c linenums">
+          #include &#60;stdio.h&#62;
+          #include &#60;stdlib.h&#62;
+          #include &#60;pthread.h&#62;
+
+          int multiple = 5;
+          unsigned long long arr[10] = { 0 };
+          void *sumtovec(void* p)
+          {
+            int rank = (long)p;
+            int i = rank * multiple - multiple;
+            for (; i &#60; rank * multiple; i++) {
+            
+              unsigned long long c = 1;
+              for (unsigned long long j = 1; j &#60; 10000000; j++) {
+                c += (c * ~i) % j;
+              }
+              arr[i] = c;
+            }
+            return NULL;
+          }
+          
+          int main()
+          {
+            long thread;
+            pthread_t *thread_handles;
+            thread_handles = (pthread_t *)malloc(2 * sizeof(pthread_t));
+            
+            for (thread = 0; thread &#60; 2; ++thread)
+              pthread_create(&thread_handles[thread], NULL, sumtovec, (void *)(thread+1));
+            
+            for (thread = 0; thread &#60; 2; ++thread)
+              pthread_join(thread_handles[thread], NULL);
+            
+            for (int i = 0; i &#60; 10; i++) {
+              printf("output arrary %d:%llu\n", i, arr[i]);
+            }
+            
+            getchar(stdin);
+            free(thread_handles);
+            return 0;
+          }
+
+        </pre>
+        <p>The computation time is 0.695 seconds, and the time of multithreading is about half less than that of single thread./p>
+        <p>It's known from Amdahl 's law.</p>
+        <p>Because our program is two parts that can be parallel completely, so the parallel ratio a is 1. If the number of threads n is 2, the theoretical acceleration ratio can be calculated as follows.</p>
+
+        <p>S = 1/(1-1+1/2) = 2</p>
+        <p>It is similar to our acceleration ratio test result of 1.36 / 0.695 = 1.95./p>
+        <p>If we compute the parts of arrays 0 through 5 twice. The parts from 0 to 5 become two serial operations.</p>
+        <pre class="prettyprint lang-c linenums">
+          int main()
+          {
+           long thread;
+           pthread_t *thread_handles;
+           thread_handles = (pthread_t *)malloc(2 * sizeof(pthread_t));
+           
+           for (thread = 0; thread &#60; 2; ++thread)
+            pthread_create(&thread_handles[thread], NULL, sumtovec, (void *)(thread + 1));
+           
+           for (thread = 0; thread &#60; 2; ++thread)
+            pthread_join(thread_handles[thread], NULL);
+           
+           for (thread = 0; thread &#60; 1; ++thread)
+            pthread_create(&thread_handles[thread], NULL, sumtovec, (void *)(thread + 1));
+           
+           for (thread = 0; thread &#60; 1; ++thread)
+            pthread_join(thread_handles[thread], NULL);
+           
+           for (int i = 0; i &#60; 10; i++) {
+            printf("output arrary %d:%llu\n", i, arr[i]);
+           }
+           getchar(stdin);
+           free(thread_handles);
+           return 0;
+          }
+        </pre>
+        <p>Modify the single thread execution part of the code as follows.</p>
+        <pre class="prettyprint lang-c linenums">
+
+          void *sumtovec(void* p) 
+          {
+            for (int i = 0; i &#60; 10; i++) {
+            
+              unsigned long long c = 1;
+              for (unsigned long long j = 1; j &#60; 10000000; j++) {
+                c += (c * ~i) % j;
+              }
+              arr[i] = c;
+            }
+            
+            for (int i = 0; i &#60; 5; i++) {
+            
+              unsigned long long c = 1;
+              for (unsigned long long j = 1; j &#60; 10000000; j++) {
+                c += (c * ~i) % j;
+              }
+              arr[i] = c;
+            }
+            return NULL;
+          }
+
+        </pre>
+        <p>The operation time of multithreading is 1.37 seconds.</p>
+        <p>The operation time in single thread mode is 2 seconds.</p>
+        <p>According to Amdahl's law, the acceleration ratio of the test condition is.</p>
+        <p>2.0 / 1.37 = 1.45</p>
+        <p>Substituting 1.45 into Amdahl 's formula to obtain the parallel proportion of the experiment.</p>
+        <p>1.45 = 1/(1-a+a/2)</p>
+        <p>a = 0.62</p>
+        <p>Because it's two parallel operations, one serial operation.</p>
+        <p>The parallel ratio of our theory is 2 / 3 = 0.666.</p>
+        <p>Now we know that parallel programming is a method of splitting software into different hardware according to parallel proportion. And know how to calculate the parallel acceleration ratio through Amdahl theorem and the method of reverse calculating the parallel proportion of software.</p>
+ 	</div>
+    </div>
+    <!-- end container -->
+  </section>
+  <!-- end section -->
+
+  <footer class="footer">
+  
+    <!-- end container -->
+    <div class="copyrights">
+      <div class="container">
+        <div class="col-lg-6 col-md-6 col-sm-12 columns footer-left">
+          <p>Copyright © 2019 - 2020 surparallel.org - All rights reserved.</p>
+        </div>
+
+        <!-- end large-6 -->
+      </div>
+      <!-- end container -->
+    </div>
+    <!-- end copyrights -->
+  </footer>
+  <!-- end footer -->
+  <div class="dmtop">Scroll to Top</div>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/php-mail-form/validate.js"></script>
+  <script src="lib/prettyphoto/js/prettyphoto.js"></script>
+  <script src="lib/isotope/isotope.min.js"></script>
+  <script src="lib/hover/hoverdir.js"></script>
+  <script src="lib/hover/hoverex.min.js"></script>
+  <script src="lib/unveil-effects/unveil-effects.js"></script>
+  <script src="lib/owl-carousel/owl-carousel.js"></script>
+  <script src="lib/jetmenu/jetmenu.js"></script>
+  <script src="lib/animate-enhanced/animate-enhanced.min.js"></script>
+  <script src="lib/jigowatt/jigowatt.js"></script>
+  <script src="lib/easypiechart/easypiechart.min.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
