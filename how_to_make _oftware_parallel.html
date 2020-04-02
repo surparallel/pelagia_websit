@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Pelagia</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="surparallel, sur, parallel, pelagia">
+  <meta content="" name="This is the homepage about Pelagia project made by Surparallel laboratory">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Ruda:400,900,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/prettyphoto/css/prettyphoto.css" rel="stylesheet">
+  <link href="lib/hover/hoverex-all.css" rel="stylesheet">
+  <link href="lib/jetmenu/jetmenu.css" rel="stylesheet">
+  <link href="lib/owl-carousel/owl-carousel.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/colors/blue.css">
+  
+  <!-- google-code-prettify -->
+   <style>
+  li.L0, li.L1, li.L2, li.L3,li.L5, li.L6, li.L7, li.L8{ list-style-type: decimal !important }
+  </style>
+  <link href="lib/google-code-prettify/prettify.css" type="text/css" rel="stylesheet"/>
+  <script type="text/javascript" src="lib/google-code-prettify/prettify.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-159851491-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-159851491-1');
+</script>
+</head>
+
+<body onload="prettyPrint()">
+  <div class="topbar clearfix">
+    <div class="container">
+      <div class="col-lg-12 text-right">
+        <div class="social_buttons">
+          <a href="https://github.com/surparallel/pelagia" data-toggle="tooltip" data-placement="bottom" title="Github"><i class="fa fa-github"></i></a>
+          <a href="https://github.com/surparallel/pelagia" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>
+          <a href="https://github.com/surparallel/pelagia" data-toggle="tooltip" data-placement="bottom" title="Google+"><i class="fa fa-google-plus"></i></a>
+          <a href="https://github.com/surparallel/pelagia" data-toggle="tooltip" data-placement="bottom" title="Dribbble"><i class="fa fa-dribbble"></i></a>
+          <a href="https://github.com/surparallel/pelagia" data-toggle="tooltip" data-placement="bottom" title="RSS"><i class="fa fa-rss"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- end container -->
+  </div>
+  <!-- end topbar -->
+
+  <header class="header">
+    <div class="container">
+      <div class="site-header clearfix">
+        <div class="col-lg-3 col-md-3 col-sm-12 title-area">
+          <div class="site-title social_buttons" id="title">
+          	<img src="img/favicon.png" alt="" >
+            <a href="index.html" title="">
+            <h4>PEL<span>AGIA</span></h4>
+            </a>
+          </div>
+        </div>
+        <!-- title area -->
+        <div class="col-lg-9 col-md-12 col-sm-12">
+          <div id="nav" class="right">
+            <div class="container clearfix">
+              <ul id="jetmenu" class="jetmenu blue">
+                <li><a href="about.html">about</a></li>
+                <li><a href="start.html">get start</a></li>
+                <li><a href="download.html">download</a></li>
+                <li><a href="documentation.html">documentation</a></li>
+                <li><a href="community.html">community</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- nav -->
+        </div>
+        <!-- title area -->
+      </div>
+      <!-- site header -->
+    </div>
+    <!-- end container -->
+  </header>
+  <!-- end header -->
+ <section class="section1">
+    <div class="container clearfix">
+      <div class="content col-lg-12 col-md-12 col-sm-12 clearfix">
+                  <h2 class="title">
+                    	<span>How To Make Software Parallel?</span>
+                    </h2>
+        <p>According to Amdahl's law, whether software can be parallel depends on the parallel proportion of software and the number of parallel processing nodes.</p>
+        <p>The number of parallel processing nodes in software is abstracted as threads.</p>
+        <p>That is to say, the higher the parallel ratio of software, the more threads of software, the more parallel the software, and the higher the efficiency.</p>
+        <p>The following procedure is to allocate an array, then call "writearr1" and "writearr2" to assign the array. It will output "0:1 1:2 2:2 3:4"</p>
+
+        <pre class="prettyprint lang-c linenums">
+        
+        #include &#60;stdio.h&#62;
+        #include &#60;stdlib.h&#62;
+        #include &#60;pthread.h&#62;
+        void *writearr1(void* p)
+        {
+          unsigned long long* arr = (unsigned long long*)p;
+          arr[0] = 1;
+          arr[1] = 2;
+          return NULL;
+        }
+
+        void *writearr2(void* p)
+        {
+          unsigned long long* arr = (unsigned long long*)p;
+          arr[2] = 3;
+          arr[3] = 4;
+          return NULL;
+        }
+
+        int main()
+        {
+          unsigned long long* arr = malloc(4 * sizeof(unsigned long long));
+          writearr1(arr);
+          writearr2(arr);
+
+          for (int i = 0; i &#60; 4; i++) {
+            printf("%d:%llu ", i, arr[i]);
+          }
+          free(arr);
+          getchar(stdin);
+          return 0;
+        }
+        </pre>
+
+        <p>If you change them to multi-threaded, then they can also run normally.</p>
+        <pre class="prettyprint lang-c linenums">
+          int main()
+          {
+            long thread;
+            pthread_t *thread_handles;
+            unsigned long long* arr = malloc(4 * sizeof(unsigned long long));
+            thread_handles = (pthread_t *)malloc(2 * sizeof(pthread_t));
+          
+            pthread_create(&thread_handles[0], NULL, writearr1, (void *)(arr));
+            pthread_create(&thread_handles[1], NULL, writearr2, (void *)(arr));
+          
+            for (thread = 0; thread &#60; 1; ++thread)
+              pthread_join(thread_handles[thread], NULL);
+          
+            for (int i = 0; i &#60; 4; i++) {
+              printf("%d:%llu ", i, arr[i]);
+            }
+          
+            getchar(stdin);
+            free(thread_handles);
+            free(arr);
+            return 0;
+          }
+                   
+        </pre>
+        <p>But if "writearr1" is modified under multithreading</p>
+        <pre class="prettyprint lang-c linenums">
+
+          void *writearr1(void* p)
+          {
+            unsigned long long* arr = (unsigned long long*)p;
+
+            arr[0] = 1;
+            arr[1] = 2;
+            arr[2] = 2;
+            return NULL;
+          }
+
+        </pre>
+        <p>There will be a certain probability that the output will become "1, 2, 2, 4".</p>
+        <p>It doesn't match our expectation.</p>
+        <p>Therefore, the correct execution of multithreading depends on the use of memory.</p>
+        <p>That is to say, the parallel proportion of software depends on the use of memory.</p>
+        <p>That is to say, if the <b>memory use conflict part in the software is the serial part.</b></p>
+        <p>For example, just in "writearr1", we created a human-oriented conflict with the use of "arr [2]".</p>
+        <p>So "arr [2] = 2;" this part becomes the serial part of the software.</p>
+        <p>Because "arr [2] = 2;" belongs to the function "writearr1", the functions "writearr1" and "writear2" are also serial. So as long as there is a serial part in the function, the whole function becomes serial. As a result, the two threads become serial.</p>
+        <p>The conclusion about memory conflict is very important, which is the important basis for us to judge whether two threads can be parallel.</p>
+        <p>To split the software, we need to know which part of the software is parallel.Consider the following functions.</p>
+        <pre class="prettyprint lang-c linenums">
+
+          void *writeif(void* p)
+          {
+            unsigned long long* arr = (unsigned long long*)p;
+
+            arr[0] = 1;
+            if (arr[0] =  1) {
+              arr[0] = 5;
+            }
+            return NULL;
+          }
+
+        </pre>
+        <p>If we split the above function into two threads.</p>
+        <pre class="prettyprint lang-c linenums">
+          void *writeif1(void* p)
+          {
+            unsigned long long* arr = (unsigned long long*)p;
+            arr[0] = 1;
+            return NULL;
+          }
+
+          void * writeif2(void* p)
+          {
+            unsigned long long* arr = (unsigned long long*)p;
+
+            if (arr[0] = 1) {
+              arr[1] = 5;
+            }
+            return NULL;
+          }
+
+        </pre>
+        <p>It must be inconsistent with our expectation, because "arr [0] = 1;" will fail in "writeif2" and cause "arr [1] = 5;" not to execute.</p>
+        <p>So a software can be divided into several threads, depending on how the software uses memory.</p>
+        <p>In this way, we can change the judgment standard of thread splitting from the logic in the software to the memory usage.</p>
+        <p>According to the memory usage of "writearr1" and "writearr2", we can subdivide them into the following.</p>
+        <pre class="prettyprint lang-c linenums">
+
+          void *writearr1(void* p)
+          {
+            unsigned long long* arr = (unsigned long long*)p;
+            arr[0] = 1;
+            return NULL;
+          }
+
+          void *writearr2(void* p)
+          {
+            unsigned long long* arr = (unsigned long long*)p;
+            arr[3] = 4;
+            return NULL;
+          }
+
+          void *writearr3(void* p)
+          {
+            unsigned long long* arr = (unsigned long long*)p;
+            arr[2] = 2;
+            arr[2] = 3;
+            return NULL;
+          }
+
+          int main()
+          {
+            long thread;
+            pthread_t *thread_handles;
+            unsigned long long* arr = malloc(4 * sizeof(unsigned long long));
+            thread_handles = (pthread_t *)malloc(3 * sizeof(pthread_t));
+
+            pthread_create(&thread_handles[0], NULL, writearr1, (void *)(arr));
+            pthread_create(&thread_handles[1], NULL, writearr2, (void *)(arr));
+            pthread_create(&thread_handles[3], NULL, writearr3, (void *)(arr));
+
+            for (thread = 0; thread &#60; 3; ++thread)
+              pthread_join(thread_handles[thread], NULL);
+
+            for (int i = 0; i &#60; 4; i++) {
+              printf("%d:%llu ", i, arr[i]);
+            }
+
+            getchar(stdin);
+            free(thread_handles);
+            free(arr);
+            return 0;
+          }
+
+        </pre>
+        <p>This article mainly introduces two questions. First, what is the serial part of software. The answer is code with conflicting memory usage. Second, the standard of software splitting is also based on the use of memory. Memory also includes file handles and socket handles in a broad sense. In more complex distributed systems, memory is defined as the carrier of data. This carrier is unique in distributed systems. And this carrier is still memory ^^.</p>
+    	</div>
+    </div>
+    <!-- end container -->
+  </section>
+  <!-- end section -->
+
+  <footer class="footer">
+  
+    <!-- end container -->
+    <div class="copyrights">
+      <div class="container">
+        <div class="col-lg-6 col-md-6 col-sm-12 columns footer-left">
+          <p>Copyright © 2019 - 2020 surparallel.org - All rights reserved.</p>
+        </div>
+
+        <!-- end large-6 -->
+      </div>
+      <!-- end container -->
+    </div>
+    <!-- end copyrights -->
+  </footer>
+  <!-- end footer -->
+  <div class="dmtop">Scroll to Top</div>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/php-mail-form/validate.js"></script>
+  <script src="lib/prettyphoto/js/prettyphoto.js"></script>
+  <script src="lib/isotope/isotope.min.js"></script>
+  <script src="lib/hover/hoverdir.js"></script>
+  <script src="lib/hover/hoverex.min.js"></script>
+  <script src="lib/unveil-effects/unveil-effects.js"></script>
+  <script src="lib/owl-carousel/owl-carousel.js"></script>
+  <script src="lib/jetmenu/jetmenu.js"></script>
+  <script src="lib/animate-enhanced/animate-enhanced.min.js"></script>
+  <script src="lib/jigowatt/jigowatt.js"></script>
+  <script src="lib/easypiechart/easypiechart.min.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
