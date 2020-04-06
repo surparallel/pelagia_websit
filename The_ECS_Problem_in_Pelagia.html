@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Pelagia</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="surparallel, sur, parallel, pelagia">
+  <meta content="" name="This is the homepage about Pelagia project made by Surparallel laboratory">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Ruda:400,900,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/prettyphoto/css/prettyphoto.css" rel="stylesheet">
+  <link href="lib/hover/hoverex-all.css" rel="stylesheet">
+  <link href="lib/jetmenu/jetmenu.css" rel="stylesheet">
+  <link href="lib/owl-carousel/owl-carousel.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/colors/blue.css">
+  
+  <!-- google-code-prettify -->
+   <style>
+  li.L0, li.L1, li.L2, li.L3,li.L5, li.L6, li.L7, li.L8{ list-style-type: decimal !important }
+  </style>
+  <link href="lib/google-code-prettify/prettify.css" type="text/css" rel="stylesheet"/>
+  <script type="text/javascript" src="lib/google-code-prettify/prettify.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-159851491-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-159851491-1');
+</script>
+</head>
+
+<body onload="prettyPrint()">
+  <div class="topbar clearfix">
+    <div class="container">
+      <div class="col-lg-12 text-right">
+        <div class="social_buttons">
+          <a href="https://github.com/surparallel/pelagia" data-toggle="tooltip" data-placement="bottom" title="Github"><i class="fa fa-github"></i></a>
+          <a href="https://github.com/surparallel/pelagia" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>
+          <a href="https://github.com/surparallel/pelagia" data-toggle="tooltip" data-placement="bottom" title="Google+"><i class="fa fa-google-plus"></i></a>
+          <a href="https://github.com/surparallel/pelagia" data-toggle="tooltip" data-placement="bottom" title="Dribbble"><i class="fa fa-dribbble"></i></a>
+          <a href="https://github.com/surparallel/pelagia" data-toggle="tooltip" data-placement="bottom" title="RSS"><i class="fa fa-rss"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- end container -->
+  </div>
+  <!-- end topbar -->
+
+  <header class="header">
+    <div class="container">
+      <div class="site-header clearfix">
+        <div class="col-lg-3 col-md-3 col-sm-12 title-area">
+          <div class="site-title social_buttons" id="title">
+          	<img src="img/favicon.png" alt="" >
+            <a href="index.html" title="">
+            <h4>PEL<span>AGIA</span></h4>
+            </a>
+          </div>
+        </div>
+        <!-- title area -->
+        <div class="col-lg-9 col-md-12 col-sm-12">
+          <div id="nav" class="right">
+            <div class="container clearfix">
+              <ul id="jetmenu" class="jetmenu blue">
+                <li><a href="about.html">about</a></li>
+                <li><a href="start.html">get start</a></li>
+                <li><a href="download.html">download</a></li>
+                <li><a href="documentation.html">documentation</a></li>
+                <li><a href="community.html">community</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- nav -->
+        </div>
+        <!-- title area -->
+      </div>
+      <!-- site header -->
+    </div>
+    <!-- end container -->
+  </header>
+  <!-- end header -->
+ <section class="section1">
+    <div class="container clearfix">
+      <div class="content col-lg-12 col-md-12 col-sm-12 clearfix">
+                  <h2 class="title">
+                    	<span>The ECS Problem in Pelagia</span>
+                    </h2>
+        <p>In gdc2017, Tim Ford from Blizzard introduced the game framework <a href="https://github.com/sschmid/entities-csharp">ECS</a>.</p>
+        <p>He split data and methods. The data is stored in the entity and the method is stored in the system. Although there are also generalized objects, this object is marked with multiple Entities and Systems used. This separation makes the degree of data aggregation very high. You can aggregate a single attribute that is scattered across multiple objects.</p>
+        <p>For example, we have two classes, teachers and students.</p>
+        <pre class="prettyprint lang-c linenums">
+          class teacher {
+            string name,
+            }
+            
+          class student {
+            string name,
+            int  grades,
+          } 
+          </pre>
+        <p>There is a special attribute grades in students' classes. If I want to traverse the grads of all students, I need to build a student index. It is obviously very troublesome to index every class with special properties.</p>
+        <p>After putting data together using ECS technology, each attribute will be automatically indexed.</p>
+        <p>This is essentially the same attribute oriented technology I used in Pelagia.</p>
+        <img src="img/attribute-oriented.png" alt="" width="800" height="300">
+        <p>The difference is that Pelagia puts all the data in the database.</p>
+        <p>More operation methods are reserved.</p>
+        <p>ECS is not a new technology. It comes from Expression problem.</p>
+        <p>The "Expression Problem" was brought to prominence by Wadler in 1998.</p>
+        <p>He is regarded as an anti object method.</p>
+        <p>I think what he expressed is that on the basis of current object, he added a new dimension to organize data.</p>
+        <p>The new latitude is not to eliminate object, but to enrich object.</p>
+        <p>Simple.json and simple.lua are added to Pelagia to demonstrate how to program ECS. You can find them in the src directory.</p>
+        <p>The simple example describes a book management system.</p>
+        <p>In this system, only professors can borrow books at collection level.</p>
+        <p>You can run them with the following command.</p>
+        <pre class="prettyprint lang-c linenums">
+          >iwj simple.json
+          >rcj init_test
+          >rcj borrow_test                   
+        </pre>
+        <p>Init_test initializes the data to be used in simple.lua.</p>
+        <p>The results are as follows.</p>
+        <img src="img/simple_init_test.png" alt="" width="800" height="300">
+        <p>borrow_test simulates the process of borrowing.</p>
+        <img src="img/simple_borrow.png" alt="" width="800" height="300">
+        <p>Through the pajo instruction, you can see the order allocation in the thread.</p>
+        <img src="img/simple_pajo.jpg" alt="" width="800" height="300">
+        <p>Through the ppa instruction, you can see that order can be allocated to up to three threads.</p>
+        <img src="img/simple_ppa.jpg" alt="" width="800" height="300">
+
+ 
+    	</div>
+    </div>
+    <!-- end container -->
+  </section>
+  <!-- end section -->
+
+  <footer class="footer">
+  
+    <!-- end container -->
+    <div class="copyrights">
+      <div class="container">
+        <div class="col-lg-6 col-md-6 col-sm-12 columns footer-left">
+          <p>Copyright © 2019 - 2020 surparallel.org - All rights reserved.</p>
+        </div>
+
+        <!-- end large-6 -->
+      </div>
+      <!-- end container -->
+    </div>
+    <!-- end copyrights -->
+  </footer>
+  <!-- end footer -->
+  <div class="dmtop">Scroll to Top</div>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/php-mail-form/validate.js"></script>
+  <script src="lib/prettyphoto/js/prettyphoto.js"></script>
+  <script src="lib/isotope/isotope.min.js"></script>
+  <script src="lib/hover/hoverdir.js"></script>
+  <script src="lib/hover/hoverex.min.js"></script>
+  <script src="lib/unveil-effects/unveil-effects.js"></script>
+  <script src="lib/owl-carousel/owl-carousel.js"></script>
+  <script src="lib/jetmenu/jetmenu.js"></script>
+  <script src="lib/animate-enhanced/animate-enhanced.min.js"></script>
+  <script src="lib/jigowatt/jigowatt.js"></script>
+  <script src="lib/easypiechart/easypiechart.min.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
