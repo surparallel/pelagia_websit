@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Pelagia</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="surparallel, sur, parallel, pelagia">
+  <meta content="" name="This is the homepage about Pelagia project made by Surparallel laboratory">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Ruda:400,900,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/prettyphoto/css/prettyphoto.css" rel="stylesheet">
+  <link href="lib/hover/hoverex-all.css" rel="stylesheet">
+  <link href="lib/jetmenu/jetmenu.css" rel="stylesheet">
+  <link href="lib/owl-carousel/owl-carousel.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/colors/blue.css">
+  
+  <!-- google-code-prettify -->
+   <style>
+  li.L0, li.L1, li.L2, li.L3,li.L5, li.L6, li.L7, li.L8{ list-style-type: decimal !important }
+  </style>
+  <link href="lib/google-code-prettify/prettify.css" type="text/css" rel="stylesheet"/>
+  <script type="text/javascript" src="lib/google-code-prettify/prettify.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-159851491-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-159851491-1');
+</script>
+</head>
+
+<body onload="prettyPrint()">
+  <div class="topbar clearfix">
+    <div class="container">
+      <div class="col-lg-12 text-right">
+        <div class="social_buttons">
+          <a href="https://github.com/surparallel/pelagia" data-toggle="tooltip" data-placement="bottom" title="Github"><i class="fa fa-github"></i></a>
+          <a href="https://github.com/surparallel/pelagia" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>
+          <a href="https://github.com/surparallel/pelagia" data-toggle="tooltip" data-placement="bottom" title="Google+"><i class="fa fa-google-plus"></i></a>
+          <a href="https://github.com/surparallel/pelagia" data-toggle="tooltip" data-placement="bottom" title="Dribbble"><i class="fa fa-dribbble"></i></a>
+          <a href="https://github.com/surparallel/pelagia" data-toggle="tooltip" data-placement="bottom" title="RSS"><i class="fa fa-rss"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- end container -->
+  </div>
+  <!-- end topbar -->
+
+  <header class="header">
+    <div class="container">
+      <div class="site-header clearfix">
+        <div class="col-lg-3 col-md-3 col-sm-12 title-area">
+          <div class="site-title social_buttons" id="title">
+          	<img src="img/favicon.png" alt="" >
+            <a href="index.html" title="">
+            <h4>PEL<span>AGIA</span></h4>
+            </a>
+          </div>
+        </div>
+        <!-- title area -->
+        <div class="col-lg-9 col-md-12 col-sm-12">
+          <div id="nav" class="right">
+            <div class="container clearfix">
+              <ul id="jetmenu" class="jetmenu blue">
+                <li><a href="about.html">about</a></li>
+                <li><a href="start.html">get start</a></li>
+                <li><a href="download.html">download</a></li>
+                <li><a href="documentation.html">documentation</a></li>
+                <li><a href="community.html">community</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- nav -->
+        </div>
+        <!-- title area -->
+      </div>
+      <!-- site header -->
+    </div>
+    <!-- end container -->
+  </header>
+  <!-- end header -->
+ <section class="section1">
+    <div class="container clearfix">
+      <div class="content col-lg-12 col-md-12 col-sm-12 clearfix">
+                  <h2 class="title">
+                    	<span>The Failure of Parallel Programming Caused by Memory Operation</span>
+                    </h2>
+        <p>When it comes to parallel programming, most people think of multithreading.</p>
+        <p>And generally think that the software can be divided into multiple threads to improve the running speed of the software.</p>
+        <p>However, the example provided by yxr620 in his blog shows some confusing results.</p>
+        <p><a href="https://zhuanlan.zhihu.com/p/112297714">Original address</a></p>
+
+        <pre class="prettyprint lang-c linenums">
+        
+        #include &#60;stdio.h&#62;
+        #include &#60;stdlib.h&#62;
+        #include &#60;pthread.h&#62;
+        #include &#60;sys/time.h&#62;
+        // Define the length of the vector
+        #define __VEC_LENGTH__ 10000000
+        
+        // Number of threads
+        int thread_count = 4;
+        // First vector
+        double arr1[__VEC_LENGTH__];
+        // Second vector
+        double arr2[__VEC_LENGTH__];
+        // Calculate the result of addition
+        double result[__VEC_LENGTH__];
+        // Functions executed by each thread
+        void *sum_vec(void *rank);
+        
+        int main()
+        {
+            long thread;
+            pthread_t *thread_handles;
+            int i;
+            srand(time(NULL));
+            thread_handles =(pthread_t *)malloc(thread_count * sizeof(pthread_t));
+            for(i = 0; i &#60; __VEC_LENGTH__; ++i)// Random initialization function
+            {
+                arr1[i] = rand() / 9999;
+                arr2[i] = rand() / 9999;
+            }
+        
+            struct timeval tv1, tv2;
+            gettimeofday(&tv1, NULL);
+            // Bind thread, start fork
+            for (thread = 0; thread &#60; thread_count; ++thread)
+            // Bind the thread hello and the parameters given to hello to the thread
+                pthread_create(&thread_handles[thread], NULL,
+                sum_vec, (void *)thread);
+        
+            // End thread
+            for (thread = 0; thread &#60; thread_count; ++thread)
+                pthread_join(thread_handles[thread], NULL);
+            gettimeofday(&tv2, NULL);
+            // Output high dimension addition execution time
+            printf("Spliting the date to 4 pieces takes %ld us\n",
+                (tv2.tv_sec - tv1.tv_sec) * 1000000 + tv2.tv_usec - tv1.tv_usec);
+        
+            printf("The first three elements of result is %lf %lf %lf\n",
+                result[0], result[1], result[2]);
+            free(thread_handles);    
+            return 0;
+        }
+        
+        void *sum_vec(void *rank)
+        {
+            long my_rank = (long)rank;
+        
+            // Each thread calculates the sum of VEC, length, thread and count elements
+            int i;
+            int my_work = __VEC_LENGTH__ / thread_count;
+            int my_first = my_rank * my_work;
+            int my_last = (my_rank + 1) * my_work;
+        
+            for (i = my_first; i &#60; my_last; ++i)
+            {
+                result[i] = arr1[i] + arr2[i];
+            }
+            return NULL;
+        }
+        </pre>
+        <p>No matter how many threads are added in this example, the efficiency can only be increased by 2 times.If you try this code on your machine, you will find strange problems.Either there is no improvement in efficiency, or the maximum can only be increased by 2 times.</p>
+        <p>This is because the CPU's memory channel is usually only 1, 2 or 4 in Von Neumann architecture.Individual high-performance servers can reach 8 or 16.That is to say, CPU is a memory channel shared by multiple cores.</p>
+        <p>This is quite different from the Harvard architecture structure of GPU.The structure of GPU is usually one core with one memory.</p>
+        <p>When the storage operation ratio is much larger than the calculation operation ratio.The performance of parallel is limited by the bottleneck of memory IO, so the efficiency improvement is not obvious.</p>
+        <p>Fortunately, there are more and more memory channels in the new CPU structure.With the improvement of CPU to parallel structure, parallel performance will be better and better.</p>
+
+    	</div>
+    </div>
+    <!-- end container -->
+  </section>
+  <!-- end section -->
+
+  <footer class="footer">
+  
+    <!-- end container -->
+    <div class="copyrights">
+      <div class="container">
+        <div class="col-lg-6 col-md-6 col-sm-12 columns footer-left">
+          <p>Copyright © 2019 - 2020 surparallel.org - All rights reserved.</p>
+        </div>
+
+        <!-- end large-6 -->
+      </div>
+      <!-- end container -->
+    </div>
+    <!-- end copyrights -->
+  </footer>
+  <!-- end footer -->
+  <div class="dmtop">Scroll to Top</div>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/php-mail-form/validate.js"></script>
+  <script src="lib/prettyphoto/js/prettyphoto.js"></script>
+  <script src="lib/isotope/isotope.min.js"></script>
+  <script src="lib/hover/hoverdir.js"></script>
+  <script src="lib/hover/hoverex.min.js"></script>
+  <script src="lib/unveil-effects/unveil-effects.js"></script>
+  <script src="lib/owl-carousel/owl-carousel.js"></script>
+  <script src="lib/jetmenu/jetmenu.js"></script>
+  <script src="lib/animate-enhanced/animate-enhanced.min.js"></script>
+  <script src="lib/jigowatt/jigowatt.js"></script>
+  <script src="lib/easypiechart/easypiechart.min.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
