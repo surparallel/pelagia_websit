@@ -1,0 +1,2506 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 12">
+<meta name=Originator content="Microsoft Word 12">
+<link rel=File-List href="Pelagia_lua_0.33.files/filelist.xml">
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>sur</o:Author>
+  <o:LastAuthor>sur</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>231</o:TotalTime>
+  <o:Created>2020-05-22T02:13:00Z</o:Created>
+  <o:LastSaved>2020-05-22T02:13:00Z</o:LastSaved>
+  <o:Pages>13</o:Pages>
+  <o:Words>2062</o:Words>
+  <o:Characters>11754</o:Characters>
+  <o:Lines>97</o:Lines>
+  <o:Paragraphs>27</o:Paragraphs>
+  <o:CharactersWithSpaces>13789</o:CharactersWithSpaces>
+  <o:Version>12.00</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<link rel=themeData href="Pelagia_lua_0.33.files/themedata.thmx">
+<link rel=colorSchemeMapping
+href="Pelagia_lua_0.33.files/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:HideSpellingErrors/>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>ZH-CN</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:AdjustLineHeightInTable/>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="--"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:宋体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:SimSun;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 680460288 22 0 262145 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:1;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:variable;
+	mso-font-signature:0 0 0 0 0 0;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1073743103 0 0 415 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1073786111 1 0 415 0;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-520092929 1073806591 9 0 415 0;}
+@font-face
+	{font-family:"\@宋体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 680460288 22 0 262145 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:宋体;
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"页眉 Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:none;
+	tab-stops:center 207.65pt right 415.3pt;
+	layout-grid-mode:char;
+	border:none;
+	mso-border-bottom-alt:solid windowtext .75pt;
+	padding:0cm;
+	mso-padding-alt:0cm 0cm 1.0pt 0cm;
+	font-size:9.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:宋体;
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"页脚 Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	tab-stops:center 207.65pt right 415.3pt;
+	layout-grid-mode:char;
+	font-size:9.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:宋体;
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-priority:10;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"标题 Char";
+	mso-style-next:正文;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-align:center;
+	mso-pagination:none;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:宋体;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	mso-font-kerning:1.0pt;
+	font-weight:bold;}
+code
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:宋体;
+	mso-ascii-font-family:宋体;
+	mso-fareast-font-family:宋体;
+	mso-hansi-font-family:宋体;
+	mso-bidi-font-family:宋体;}
+pre
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"HTML 预设格式 Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:宋体;
+	mso-bidi-font-family:宋体;}
+span.Char
+	{mso-style-name:"页眉 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:页眉;
+	mso-ansi-font-size:9.0pt;
+	mso-bidi-font-size:9.0pt;}
+span.Char0
+	{mso-style-name:"页脚 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:页脚;
+	mso-ansi-font-size:9.0pt;
+	mso-bidi-font-size:9.0pt;}
+span.Char1
+	{mso-style-name:"标题 Char";
+	mso-style-priority:10;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:标题;
+	mso-ansi-font-size:16.0pt;
+	mso-bidi-font-size:16.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:宋体;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	font-weight:bold;}
+span.HTMLChar
+	{mso-style-name:"HTML 预设格式 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"HTML 预设格式";
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:宋体;
+	mso-ascii-font-family:宋体;
+	mso-fareast-font-family:宋体;
+	mso-hansi-font-family:宋体;
+	mso-bidi-font-family:宋体;
+	mso-font-kerning:0pt;}
+span.pln
+	{mso-style-name:pln;
+	mso-style-unhide:no;}
+span.pun
+	{mso-style-name:pun;
+	mso-style-unhide:no;}
+span.com
+	{mso-style-name:com;
+	mso-style-unhide:no;}
+span.lit
+	{mso-style-name:lit;
+	mso-style-unhide:no;}
+span.keyword
+	{mso-style-name:keyword;
+	mso-style-unhide:no;}
+span.datatypes
+	{mso-style-name:datatypes;
+	mso-style-unhide:no;}
+span.string
+	{mso-style-name:string;
+	mso-style-unhide:no;}
+span.comment
+	{mso-style-name:comment;
+	mso-style-unhide:no;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;
+	mso-footnote-separator:url("Pelagia_lua_0.33.files/header.html") fs;
+	mso-footnote-continuation-separator:url("Pelagia_lua_0.33.files/header.html") fcs;
+	mso-endnote-separator:url("Pelagia_lua_0.33.files/header.html") es;
+	mso-endnote-continuation-separator:url("Pelagia_lua_0.33.files/header.html") ecs;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-paper-source:0;
+	layout-grid:15.6pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:13658264;
+	mso-list-template-ids:-1286718000;}
+@list l1
+	{mso-list-id:161435310;
+	mso-list-template-ids:1679165572;}
+@list l2
+	{mso-list-id:165292694;
+	mso-list-template-ids:-643262562;}
+@list l3
+	{mso-list-id:406075634;
+	mso-list-template-ids:-1199824846;}
+@list l4
+	{mso-list-id:712462265;
+	mso-list-template-ids:1290027178;}
+@list l5
+	{mso-list-id:819883499;
+	mso-list-template-ids:1038494864;}
+@list l6
+	{mso-list-id:1016808831;
+	mso-list-template-ids:-1008283372;}
+@list l7
+	{mso-list-id:1050105274;
+	mso-list-template-ids:319854672;}
+@list l8
+	{mso-list-id:1160389746;
+	mso-list-template-ids:-673694600;}
+@list l9
+	{mso-list-id:1214929503;
+	mso-list-template-ids:1303428148;}
+@list l10
+	{mso-list-id:1508406430;
+	mso-list-template-ids:1107090724;}
+@list l11
+	{mso-list-id:1757045327;
+	mso-list-template-ids:1580490854;}
+@list l12
+	{mso-list-id:2037191966;
+	mso-list-template-ids:-1872748442;}
+@list l13
+	{mso-list-id:2066173011;
+	mso-list-template-ids:-1927932130;}
+@list l14
+	{mso-list-id:2126344440;
+	mso-list-template-ids:1330795040;}
+@list l15
+	{mso-list-id:2136947929;
+	mso-list-template-ids:876912780;}
+@list l16
+	{mso-list-id:2146579513;
+	mso-list-template-ids:1757724732;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:普通表格;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.5pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-font-kerning:1.0pt;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="15362"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="2"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=ZH-CN style='tab-interval:21.0pt;text-justify-trim:punctuation'>
+
+<div class=Section1 style='layout-grid:15.6pt'>
+
+<p class=MsoTitle><span lang=EN-US>Pelagia reference manual Lua language
+edition</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>Introduce<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>Pelagia is an automatic parallelization
+tool developed by surparallel open source based on the concept of sequential
+virtual machine.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Pelagia is developed by ANSI C, abides by
+agpl protocol, and supports multiple operating systems and languages.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>It supports automatic parallelization,
+transparent thread calling, embedded key value database, embedded multi
+language running environment, and provides APIs and documents for each
+language.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>The set concept in Boolean algebra is used
+to describe the operation of data. Including key, value, ordered set, index set
+and other types.</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Who
+is suitable to read this manual?</span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>This manual is applicable to professional
+software developers, through which you can accurately understand the details of
+Pelagia development.</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>What
+do you need to know before reading this manual?</span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>Before reading this manual, you need to
+know the basic knowledge of LUA language, Boolean algebra, data structure, etc.</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Related
+resources</span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>Pelagia website: https://surparallel.org</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Environmental<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>There are two ways to use Lua on Pelagia,
+one is through C embedding, the other is to use Pelagia executable program to
+run. Pelagia executable program has rich startup parameters and command line.
+They can be found by launching the command – h and the interactive command
+help. Support lua5.1 and luajit2.0.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>Environmental installation<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Install
+on Linux system</span></b><b style='mso-bidi-font-weight:normal'><span
+lang=EN-US style='font-family:宋体;mso-ascii-theme-font:major-fareast;mso-fareast-theme-font:
+major-fareast;mso-hansi-theme-font:major-fareast'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>Linux &amp;amp; Mac installation is very simple,
+just download the source package and decompress and compile it on the terminal.
+This article uses version 0.1 for installation:</span></p>
+
+<pre style='background:#F6F8FA'><code><span lang=EN-US style='font-size:8.5pt;
+font-family:Consolas;color:#24292E'>git clone https://github.com/surparallel/pelagia.git<o:p></o:p></span></code></pre><pre
+style='background:#F6F8FA'><code><span lang=EN-US style='font-size:8.5pt;
+font-family:Consolas;color:#24292E'>cd pelagia/src<o:p></o:p></span></code></pre><pre
+style='background:#F6F8FA'><code><span lang=EN-US style='font-size:8.5pt;
+font-family:Consolas;color:#24292E'>make linux</span></code><span lang=EN-US
+style='font-size:8.5pt;font-family:Consolas;color:#24292E'><o:p></o:p></span></pre>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-family:宋体;mso-ascii-theme-font:major-fareast;mso-fareast-theme-font:
+major-fareast;mso-hansi-theme-font:major-fareast'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Install
+on Mac OS X<o:p></o:p></span></b></p>
+
+<pre style='background:#F6F8FA'><code><span lang=EN-US style='font-size:8.5pt;
+font-family:Consolas;color:#24292E'>git clone https://github.com/surparallel/pelagia.git<o:p></o:p></span></code></pre><pre
+style='background:#F6F8FA'><code><span lang=EN-US style='font-size:8.5pt;
+font-family:Consolas;color:#24292E'>cd pelagia/src<o:p></o:p></span></code></pre><pre
+style='background:#F6F8FA'><code><span lang=EN-US style='font-size:8.5pt;
+font-family:Consolas;color:#24292E'>make macosx</span></code><span lang=EN-US
+style='font-size:8.5pt;font-family:Consolas;color:#24292E'><o:p></o:p></span></pre>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:6.5pt;mso-bidi-font-size:
+11.0pt;font-family:Consolas;mso-fareast-font-family:宋体;color:black;mso-font-kerning:
+0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Install
+on window system<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>After decompression, enter the msvcs
+directory and open pelagia.sln for compilation.</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>configure.json<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>Then configure in config.json</span></p>
+
+<div style='mso-element:para-border-div;border:none;border-left:solid #6CE26C 2.25pt;
+padding:0cm 0cm 0cm 0cm;background:white;margin-left:18.0pt;margin-right:0cm'>
+
+<p class=MsoNormal align=left style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:18.0pt;text-align:left;text-indent:-18.0pt;line-height:9.0pt;
+mso-pagination:widow-orphan;mso-list:l16 level1 lfo17;tab-stops:list 36.0pt;
+background:white;border:none;mso-border-left-alt:solid #6CE26C 2.25pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><![if !supportLists]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+Consolas;color:#5C5C5C;mso-font-kerning:0pt'><span style='mso-list:Ignore'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:black;mso-font-kerning:0pt'>{&nbsp;&nbsp;</span><span lang=EN-US
+style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:宋体;
+color:#5C5C5C;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:18.0pt;text-align:left;text-indent:-18.0pt;line-height:9.0pt;
+mso-pagination:widow-orphan;mso-list:l16 level1 lfo17;tab-stops:list 36.0pt;
+background:#F8F8F8;border:none;mso-border-left-alt:solid #6CE26C 2.25pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><![if !supportLists]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+Consolas;color:#5C5C5C;mso-font-kerning:0pt'><span style='mso-list:Ignore'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:black;mso-font-kerning:0pt'>&quot;dbPath&quot;:&quot;&quot;,&nbsp;&nbsp;</span><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:#5C5C5C;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:18.0pt;text-align:left;text-indent:-18.0pt;line-height:9.0pt;
+mso-pagination:widow-orphan;mso-list:l16 level1 lfo17;tab-stops:list 36.0pt;
+background:white;border:none;mso-border-left-alt:solid #6CE26C 2.25pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><![if !supportLists]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+Consolas;color:#5C5C5C;mso-font-kerning:0pt'><span style='mso-list:Ignore'>3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:black;mso-font-kerning:0pt'>&quot;core&quot;:1,&nbsp;&nbsp;</span><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:#5C5C5C;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:18.0pt;text-align:left;text-indent:-18.0pt;line-height:9.0pt;
+mso-pagination:widow-orphan;mso-list:l16 level1 lfo17;tab-stops:list 36.0pt;
+background:#F8F8F8;border:none;mso-border-left-alt:solid #6CE26C 2.25pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><![if !supportLists]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+Consolas;color:#5C5C5C;mso-font-kerning:0pt'><span style='mso-list:Ignore'>4.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:black;mso-font-kerning:0pt'>&quot;maxTableWeight&quot;:100,&nbsp;&nbsp;</span><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:#5C5C5C;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:18.0pt;text-align:left;text-indent:-18.0pt;line-height:9.0pt;
+mso-pagination:widow-orphan;mso-list:l16 level1 lfo17;tab-stops:list 36.0pt;
+background:white;border:none;mso-border-left-alt:solid #6CE26C 2.25pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><![if !supportLists]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+Consolas;color:#5C5C5C;mso-font-kerning:0pt'><span style='mso-list:Ignore'>5.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:black;mso-font-kerning:0pt'>&quot;luaDllPath&quot;:&quot;./liblua.so&quot;,&nbsp;&nbsp;</span><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:#5C5C5C;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:18.0pt;text-align:left;text-indent:-18.0pt;line-height:9.0pt;
+mso-pagination:widow-orphan;mso-list:l16 level1 lfo17;tab-stops:list 36.0pt;
+background:#F8F8F8;border:none;mso-border-left-alt:solid #6CE26C 2.25pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><![if !supportLists]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+Consolas;color:#5C5C5C;mso-font-kerning:0pt'><span style='mso-list:Ignore'>6.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:black;mso-font-kerning:0pt'>&nbsp;&nbsp;</span><span lang=EN-US
+style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:宋体;
+color:#5C5C5C;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:18.0pt;text-align:left;text-indent:-18.0pt;line-height:9.0pt;
+mso-pagination:widow-orphan;mso-list:l16 level1 lfo17;tab-stops:list 36.0pt;
+background:white;border:none;mso-border-left-alt:solid #6CE26C 2.25pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><![if !supportLists]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+Consolas;color:#5C5C5C;mso-font-kerning:0pt'><span style='mso-list:Ignore'>7.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:black;mso-font-kerning:0pt'>&quot;o1&quot;:{&nbsp;&nbsp;</span><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:#5C5C5C;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:18.0pt;text-align:left;text-indent:-18.0pt;line-height:9.0pt;
+mso-pagination:widow-orphan;mso-list:l16 level1 lfo17;tab-stops:list 36.0pt;
+background:#F8F8F8;border:none;mso-border-left-alt:solid #6CE26C 2.25pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><![if !supportLists]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+Consolas;color:#5C5C5C;mso-font-kerning:0pt'><span style='mso-list:Ignore'>8.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:black;mso-font-kerning:0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&quot;orderType&quot;:&quot;lua&quot;,&nbsp;&nbsp;</span><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:#5C5C5C;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:18.0pt;text-align:left;text-indent:-18.0pt;line-height:9.0pt;
+mso-pagination:widow-orphan;mso-list:l16 level1 lfo17;tab-stops:list 36.0pt;
+background:white;border:none;mso-border-left-alt:solid #6CE26C 2.25pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><![if !supportLists]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+Consolas;color:#5C5C5C;mso-font-kerning:0pt'><span style='mso-list:Ignore'>9.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:black;mso-font-kerning:0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&quot;file&quot;:&quot;hello2.lua&quot;,&nbsp;&nbsp;</span><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:#5C5C5C;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:18.0pt;text-align:left;text-indent:-18.0pt;line-height:9.0pt;
+mso-pagination:widow-orphan;mso-list:l16 level1 lfo17;tab-stops:list 36.0pt;
+background:#F8F8F8;border:none;mso-border-left-alt:solid #6CE26C 2.25pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><![if !supportLists]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+Consolas;color:#5C5C5C;mso-font-kerning:0pt'><span style='mso-list:Ignore'>10.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:black;mso-font-kerning:0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&quot;fun&quot;:&quot;sayHello&quot;,&nbsp;&nbsp;</span><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:#5C5C5C;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:18.0pt;text-align:left;text-indent:-18.0pt;line-height:9.0pt;
+mso-pagination:widow-orphan;mso-list:l16 level1 lfo17;tab-stops:list 36.0pt;
+background:white;border:none;mso-border-left-alt:solid #6CE26C 2.25pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><![if !supportLists]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+Consolas;color:#5C5C5C;mso-font-kerning:0pt'><span style='mso-list:Ignore'>11.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:black;mso-font-kerning:0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&quot;weight&quot;:1,&nbsp;&nbsp;</span><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:#5C5C5C;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:18.0pt;text-align:left;text-indent:-18.0pt;line-height:9.0pt;
+mso-pagination:widow-orphan;mso-list:l16 level1 lfo17;tab-stops:list 36.0pt;
+background:#F8F8F8;border:none;mso-border-left-alt:solid #6CE26C 2.25pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><![if !supportLists]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+Consolas;color:#5C5C5C;mso-font-kerning:0pt'><span style='mso-list:Ignore'>12.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:black;mso-font-kerning:0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&quot;t1&quot;:{&nbsp;&nbsp;</span><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:#5C5C5C;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:18.0pt;text-align:left;text-indent:-18.0pt;line-height:9.0pt;
+mso-pagination:widow-orphan;mso-list:l16 level1 lfo17;tab-stops:list 36.0pt;
+background:white;border:none;mso-border-left-alt:solid #6CE26C 2.25pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><![if !supportLists]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+Consolas;color:#5C5C5C;mso-font-kerning:0pt'><span style='mso-list:Ignore'>13.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:black;mso-font-kerning:0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;weight&quot;:1,&nbsp;&nbsp;</span><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:#5C5C5C;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:18.0pt;text-align:left;text-indent:-18.0pt;line-height:9.0pt;
+mso-pagination:widow-orphan;mso-list:l16 level1 lfo17;tab-stops:list 36.0pt;
+background:#F8F8F8;border:none;mso-border-left-alt:solid #6CE26C 2.25pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><![if !supportLists]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+Consolas;color:#5C5C5C;mso-font-kerning:0pt'><span style='mso-list:Ignore'>14.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:black;mso-font-kerning:0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;nosave&quot;:0,&nbsp;&nbsp;</span><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:#5C5C5C;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:18.0pt;text-align:left;text-indent:-18.0pt;line-height:9.0pt;
+mso-pagination:widow-orphan;mso-list:l16 level1 lfo17;tab-stops:list 36.0pt;
+background:white;border:none;mso-border-left-alt:solid #6CE26C 2.25pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><![if !supportLists]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+Consolas;color:#5C5C5C;mso-font-kerning:0pt'><span style='mso-list:Ignore'>15.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:black;mso-font-kerning:0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;noshare&quot;:0&nbsp;&nbsp;</span><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:#5C5C5C;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:18.0pt;text-align:left;text-indent:-18.0pt;line-height:9.0pt;
+mso-pagination:widow-orphan;mso-list:l16 level1 lfo17;tab-stops:list 36.0pt;
+background:#F8F8F8;border:none;mso-border-left-alt:solid #6CE26C 2.25pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><![if !supportLists]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+Consolas;color:#5C5C5C;mso-font-kerning:0pt'><span style='mso-list:Ignore'>16.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:black;mso-font-kerning:0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:#5C5C5C;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:18.0pt;text-align:left;text-indent:-18.0pt;line-height:9.0pt;
+mso-pagination:widow-orphan;mso-list:l16 level1 lfo17;tab-stops:list 36.0pt;
+background:white;border:none;mso-border-left-alt:solid #6CE26C 2.25pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><![if !supportLists]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+Consolas;color:#5C5C5C;mso-font-kerning:0pt'><span style='mso-list:Ignore'>17.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:black;mso-font-kerning:0pt'>&nbsp;&nbsp;&nbsp;&nbsp;},&nbsp;&nbsp;</span><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:#5C5C5C;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:18.0pt;text-align:left;text-indent:-18.0pt;line-height:9.0pt;
+mso-pagination:widow-orphan;mso-list:l16 level1 lfo17;tab-stops:list 36.0pt;
+background:#F8F8F8;border:none;mso-border-left-alt:solid #6CE26C 2.25pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><![if !supportLists]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+Consolas;color:#5C5C5C;mso-font-kerning:0pt'><span style='mso-list:Ignore'>18.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:black;mso-font-kerning:0pt'>&nbsp;&nbsp;</span><span lang=EN-US
+style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:宋体;
+color:#5C5C5C;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:18.0pt;text-align:left;text-indent:-18.0pt;line-height:9.0pt;
+mso-pagination:widow-orphan;mso-list:l16 level1 lfo17;tab-stops:list 36.0pt;
+background:white;border:none;mso-border-left-alt:solid #6CE26C 2.25pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><![if !supportLists]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+Consolas;color:#5C5C5C;mso-font-kerning:0pt'><span style='mso-list:Ignore'>19.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:black;mso-font-kerning:0pt'>&quot;base&quot;:{&nbsp;&nbsp;</span><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:#5C5C5C;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:18.0pt;text-align:left;text-indent:-18.0pt;line-height:9.0pt;
+mso-pagination:widow-orphan;mso-list:l16 level1 lfo17;tab-stops:list 36.0pt;
+background:#F8F8F8;border:none;mso-border-left-alt:solid #6CE26C 2.25pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><![if !supportLists]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+Consolas;color:#5C5C5C;mso-font-kerning:0pt'><span style='mso-list:Ignore'>20.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:black;mso-font-kerning:0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&quot;orderType&quot;:&quot;lua&quot;,&nbsp;&nbsp;</span><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:#5C5C5C;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:18.0pt;text-align:left;text-indent:-18.0pt;line-height:9.0pt;
+mso-pagination:widow-orphan;mso-list:l16 level1 lfo17;tab-stops:list 36.0pt;
+background:white;border:none;mso-border-left-alt:solid #6CE26C 2.25pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><![if !supportLists]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+Consolas;color:#5C5C5C;mso-font-kerning:0pt'><span style='mso-list:Ignore'>21.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:black;mso-font-kerning:0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&quot;file&quot;:&quot;base.lua&quot;,&nbsp;&nbsp;</span><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:#5C5C5C;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:18.0pt;text-align:left;text-indent:-18.0pt;line-height:9.0pt;
+mso-pagination:widow-orphan;mso-list:l16 level1 lfo17;tab-stops:list 36.0pt;
+background:#F8F8F8;border:none;mso-border-left-alt:solid #6CE26C 2.25pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><![if !supportLists]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+Consolas;color:#5C5C5C;mso-font-kerning:0pt'><span style='mso-list:Ignore'>22.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:black;mso-font-kerning:0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&quot;fun&quot;:&quot;base&quot;,&nbsp;&nbsp;</span><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:#5C5C5C;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:18.0pt;text-align:left;text-indent:-18.0pt;line-height:9.0pt;
+mso-pagination:widow-orphan;mso-list:l16 level1 lfo17;tab-stops:list 36.0pt;
+background:white;border:none;mso-border-left-alt:solid #6CE26C 2.25pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><![if !supportLists]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+Consolas;color:#5C5C5C;mso-font-kerning:0pt'><span style='mso-list:Ignore'>23.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:black;mso-font-kerning:0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&quot;weight&quot;:1,&nbsp;&nbsp;</span><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:#5C5C5C;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:18.0pt;text-align:left;text-indent:-18.0pt;line-height:9.0pt;
+mso-pagination:widow-orphan;mso-list:l16 level1 lfo17;tab-stops:list 36.0pt;
+background:#F8F8F8;border:none;mso-border-left-alt:solid #6CE26C 2.25pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><![if !supportLists]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+Consolas;color:#5C5C5C;mso-font-kerning:0pt'><span style='mso-list:Ignore'>24.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:black;mso-font-kerning:0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&quot;t0&quot;:{&nbsp;&nbsp;</span><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:#5C5C5C;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:18.0pt;text-align:left;text-indent:-18.0pt;line-height:9.0pt;
+mso-pagination:widow-orphan;mso-list:l16 level1 lfo17;tab-stops:list 36.0pt;
+background:white;border:none;mso-border-left-alt:solid #6CE26C 2.25pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><![if !supportLists]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+Consolas;color:#5C5C5C;mso-font-kerning:0pt'><span style='mso-list:Ignore'>25.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:black;mso-font-kerning:0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;weight&quot;:1,&nbsp;&nbsp;</span><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:#5C5C5C;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:18.0pt;text-align:left;text-indent:-18.0pt;line-height:9.0pt;
+mso-pagination:widow-orphan;mso-list:l16 level1 lfo17;tab-stops:list 36.0pt;
+background:#F8F8F8;border:none;mso-border-left-alt:solid #6CE26C 2.25pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><![if !supportLists]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+Consolas;color:#5C5C5C;mso-font-kerning:0pt'><span style='mso-list:Ignore'>26.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:black;mso-font-kerning:0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;nosave&quot;:0,&nbsp;&nbsp;</span><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:#5C5C5C;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:18.0pt;text-align:left;text-indent:-18.0pt;line-height:9.0pt;
+mso-pagination:widow-orphan;mso-list:l16 level1 lfo17;tab-stops:list 36.0pt;
+background:white;border:none;mso-border-left-alt:solid #6CE26C 2.25pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><![if !supportLists]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+Consolas;color:#5C5C5C;mso-font-kerning:0pt'><span style='mso-list:Ignore'>27.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:black;mso-font-kerning:0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;noshare&quot;:0&nbsp;&nbsp;</span><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:#5C5C5C;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:18.0pt;text-align:left;text-indent:-18.0pt;line-height:9.0pt;
+mso-pagination:widow-orphan;mso-list:l16 level1 lfo17;tab-stops:list 36.0pt;
+background:#F8F8F8;border:none;mso-border-left-alt:solid #6CE26C 2.25pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><![if !supportLists]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+Consolas;color:#5C5C5C;mso-font-kerning:0pt'><span style='mso-list:Ignore'>28.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:black;mso-font-kerning:0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},&nbsp;&nbsp;</span><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:#5C5C5C;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:18.0pt;text-align:left;text-indent:-18.0pt;line-height:9.0pt;
+mso-pagination:widow-orphan;mso-list:l16 level1 lfo17;tab-stops:list 36.0pt;
+background:white;border:none;mso-border-left-alt:solid #6CE26C 2.25pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><![if !supportLists]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+Consolas;color:#5C5C5C;mso-font-kerning:0pt'><span style='mso-list:Ignore'>29.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:black;mso-font-kerning:0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&quot;t1&quot;:{&nbsp;&nbsp;</span><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:#5C5C5C;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:18.0pt;text-align:left;text-indent:-18.0pt;line-height:9.0pt;
+mso-pagination:widow-orphan;mso-list:l16 level1 lfo17;tab-stops:list 36.0pt;
+background:#F8F8F8;border:none;mso-border-left-alt:solid #6CE26C 2.25pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><![if !supportLists]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+Consolas;color:#5C5C5C;mso-font-kerning:0pt'><span style='mso-list:Ignore'>30.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:black;mso-font-kerning:0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;weight&quot;:1,&nbsp;&nbsp;</span><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:#5C5C5C;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:18.0pt;text-align:left;text-indent:-18.0pt;line-height:9.0pt;
+mso-pagination:widow-orphan;mso-list:l16 level1 lfo17;tab-stops:list 36.0pt;
+background:white;border:none;mso-border-left-alt:solid #6CE26C 2.25pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><![if !supportLists]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+Consolas;color:#5C5C5C;mso-font-kerning:0pt'><span style='mso-list:Ignore'>31.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:black;mso-font-kerning:0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;nosave&quot;:0,&nbsp;&nbsp;</span><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:#5C5C5C;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:18.0pt;text-align:left;text-indent:-18.0pt;line-height:9.0pt;
+mso-pagination:widow-orphan;mso-list:l16 level1 lfo17;tab-stops:list 36.0pt;
+background:#F8F8F8;border:none;mso-border-left-alt:solid #6CE26C 2.25pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><![if !supportLists]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+Consolas;color:#5C5C5C;mso-font-kerning:0pt'><span style='mso-list:Ignore'>32.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:black;mso-font-kerning:0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;noshare&quot;:0&nbsp;&nbsp;</span><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:#5C5C5C;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:18.0pt;text-align:left;text-indent:-18.0pt;line-height:9.0pt;
+mso-pagination:widow-orphan;mso-list:l16 level1 lfo17;tab-stops:list 36.0pt;
+background:white;border:none;mso-border-left-alt:solid #6CE26C 2.25pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><![if !supportLists]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+Consolas;color:#5C5C5C;mso-font-kerning:0pt'><span style='mso-list:Ignore'>33.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:black;mso-font-kerning:0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:#5C5C5C;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:18.0pt;text-align:left;text-indent:-18.0pt;line-height:9.0pt;
+mso-pagination:widow-orphan;mso-list:l16 level1 lfo17;tab-stops:list 36.0pt;
+background:#F8F8F8;border:none;mso-border-left-alt:solid #6CE26C 2.25pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><![if !supportLists]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+Consolas;color:#5C5C5C;mso-font-kerning:0pt'><span style='mso-list:Ignore'>34.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:black;mso-font-kerning:0pt'>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:#5C5C5C;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:18.0pt;text-align:left;text-indent:-18.0pt;line-height:9.0pt;
+mso-pagination:widow-orphan;mso-list:l16 level1 lfo17;tab-stops:list 36.0pt;
+background:white;border:none;mso-border-left-alt:solid #6CE26C 2.25pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'><![if !supportLists]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+Consolas;color:#5C5C5C;mso-font-kerning:0pt'><span style='mso-list:Ignore'>35.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:
+宋体;color:black;mso-font-kerning:0pt'>}&nbsp;&nbsp;</span><span lang=EN-US
+style='font-size:7.5pt;font-family:Consolas;mso-fareast-font-family:宋体;
+color:#5C5C5C;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoNormal><span lang=EN-US>dbPath: Database save directory.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>core: Number of threads.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>logOutput: Type of log output. &quot; file&quot;
+of &quot;print&quot;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>logLevel: Level of log output. number of 0
+~ 6.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:9.5pt;font-family:
+Consolas;color:blue;background:white;mso-highlight:white;mso-font-kerning:0pt'>enum</span><span
+lang=EN-US style='font-size:9.5pt;font-family:Consolas;color:black;background:
+white;mso-highlight:white;mso-font-kerning:0pt'> </span><span lang=EN-US
+style='font-size:9.5pt;font-family:Consolas;color:#216F85;background:white;
+mso-highlight:white;mso-font-kerning:0pt'>OutPutLevel</span><span lang=EN-US
+style='font-size:9.5pt;font-family:Consolas;color:black;background:white;
+mso-highlight:white;mso-font-kerning:0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:9.5pt;font-family:
+Consolas;color:black;background:white;mso-highlight:white;mso-font-kerning:
+0pt'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:9.5pt;font-family:
+Consolas;color:black;background:white;mso-highlight:white;mso-font-kerning:
+0pt'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US style='font-size:9.5pt;font-family:Consolas;color:#6F008A;
+background:white;mso-highlight:white;mso-font-kerning:0pt'>log_null</span><span
+lang=EN-US style='font-size:9.5pt;font-family:Consolas;color:black;background:
+white;mso-highlight:white;mso-font-kerning:0pt'> = 0,<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:9.5pt;font-family:
+Consolas;color:black;background:white;mso-highlight:white;mso-font-kerning:
+0pt'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US style='font-size:9.5pt;font-family:Consolas;color:#6F008A;
+background:white;mso-highlight:white;mso-font-kerning:0pt'>log_error</span><span
+lang=EN-US style='font-size:9.5pt;font-family:Consolas;color:black;background:
+white;mso-highlight:white;mso-font-kerning:0pt'>,<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:9.5pt;font-family:
+Consolas;color:black;background:white;mso-highlight:white;mso-font-kerning:
+0pt'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US style='font-size:9.5pt;font-family:Consolas;color:#6F008A;
+background:white;mso-highlight:white;mso-font-kerning:0pt'>log_warn</span><span
+lang=EN-US style='font-size:9.5pt;font-family:Consolas;color:black;background:
+white;mso-highlight:white;mso-font-kerning:0pt'>,<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:9.5pt;font-family:
+Consolas;color:black;background:white;mso-highlight:white;mso-font-kerning:
+0pt'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US style='font-size:9.5pt;font-family:Consolas;color:#6F008A;
+background:white;mso-highlight:white;mso-font-kerning:0pt'>log_stat</span><span
+lang=EN-US style='font-size:9.5pt;font-family:Consolas;color:black;background:
+white;mso-highlight:white;mso-font-kerning:0pt'>,<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:9.5pt;font-family:
+Consolas;color:black;background:white;mso-highlight:white;mso-font-kerning:
+0pt'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US style='font-size:9.5pt;font-family:Consolas;color:#6F008A;
+background:white;mso-highlight:white;mso-font-kerning:0pt'>log_fun</span><span
+lang=EN-US style='font-size:9.5pt;font-family:Consolas;color:black;background:
+white;mso-highlight:white;mso-font-kerning:0pt'>,<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:9.5pt;font-family:
+Consolas;color:black;background:white;mso-highlight:white;mso-font-kerning:
+0pt'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US style='font-size:9.5pt;font-family:Consolas;color:#6F008A;
+background:white;mso-highlight:white;mso-font-kerning:0pt'>log_details</span><span
+lang=EN-US style='font-size:9.5pt;font-family:Consolas;color:black;background:
+white;mso-highlight:white;mso-font-kerning:0pt'>,<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-size:9.5pt;font-family:
+Consolas;color:black;background:white;mso-highlight:white;mso-font-kerning:
+0pt'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US style='font-size:9.5pt;font-family:Consolas;color:#6F008A;
+background:white;mso-highlight:white;mso-font-kerning:0pt'>log_all</span><span
+lang=EN-US style='font-size:9.5pt;font-family:Consolas;color:black;background:
+white;mso-highlight:white;mso-font-kerning:0pt'>,<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:9.5pt;font-family:Consolas;
+color:black;background:white;mso-highlight:white;mso-font-kerning:0pt'>};</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>maxTableWeight: every file of table max
+weight. Default 1000.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>luaPath: The directory of lua script
+defaults to the current directory.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>luaDllPath: The directory of lua dynamic library,
+which is the current directory by default.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>dllPath: Dynamic library load directory,
+default to current directory.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>luaHot: Whether it is a hot update. The
+default value is 0, which means it is closed. Every time you restart the
+loading script.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>nosave: Do not save data to file.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>stat: Enable statistics,Use when loglevel
+is 3.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>checkTime: The interval time of statistics
+is 5 seconds by default.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>maxQueue: The maximum length of the message
+queue. If it exceeds the length, it will be discarded. The default value is 0,
+which means it is closed.</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>Start <b style='mso-bidi-font-weight:normal'>./pelagia</b>
+and enter the command</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>&gt;iwj
+config.json<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>You can call base.lua for basic testing</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>&gt;rcj
+base<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>Job API<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Correlation
+function of function in task.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>pelagia.</span></b><span
+lang=EN-US> <b style='mso-bidi-font-weight:normal'>NVersion<o:p></o:p></b></span></p>
+
+<p class=MsoNormal><span lang=EN-US>return number of version</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Grammar<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>number pelagia.
+NVersion ();</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Parameter<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>null</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>Return</span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>version</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>pelagia.</span></b><span
+lang=EN-US> <b style='mso-bidi-font-weight:normal'>MVersion<o:p></o:p></b></span></p>
+
+<p class=MsoNormal><span lang=EN-US>return number of main version</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Grammar<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>number pelagia.
+NVersion ();</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Parameter<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>null</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>Return</span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>version</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>pelagia.RemoteCall<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Trigger
+other tasks. Note that this is an asynchronous trigger. The triggered task may
+run in any thread. Don't wait for triggered tasks.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Grammar<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>number pelagia.RemoteCall(string
+order, string value);</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Parameter<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>order: task
+name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>value</span><span
+style='font-family:宋体;mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;
+mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin'>：</span><span lang=EN-US>Parameter
+Pointer.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>Return</span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>Return 1 success, return 0 failure.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>pelagia.Timer<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>Add timer.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Grammar<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>void pelagia.Timer(double timer, string order,
+string value);</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Parameter<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>timer: Timing
+trigger time, in milliseconds.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>order:
+Triggered order name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>value:
+parameter.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Return<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>nil</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>pelagia.</span></b><span
+lang=EN-US> <b style='mso-bidi-font-weight:normal'>MS<o:p></o:p></b></span></p>
+
+<p class=MsoNormal><span lang=EN-US>Returns the current milliseconds</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Grammar<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>number pelagia.MS ();</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Parameter<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>nil</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Return<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>number of
+milliseconds</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>pelagia.TableName<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>Returns the table name owned by the current
+order</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Grammar<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>string pelagia. TableName ();</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Parameter<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>nil</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Return<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Json of TableName</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>pelagia.OrderName<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>Returns the order name owned by the current
+job</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Grammar<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>string pelagia.OrderName ();</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Parameter<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>nil</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Return<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>string
+of OrderName</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>pelagia.Commite<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>Submit a commit immediately. Write data and
+read data will be merged into the main cache and submitted to the file at the
+same time</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Grammar<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>void pelagia.Commite ();</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Parameter<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>nil</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Return<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>nil</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>pelagia.Set<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>The command is used to set the value of the
+given key. If the key already stores other values, set overwrites the old
+values, and null depends on the type.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Grammar<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>number pelagia.Set(string
+table, string key, string value);</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Parameter<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>table:
+table name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>key: key
+value name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>value: a
+pointer to a value.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Return<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>Return 1 success, return 0 failure.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>pelagia.MultiSet<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Used to
+set one or more key value pairs at the same time.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Grammar<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>number pelagia.MultiSet(string
+table , string json);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>Parameter<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>table:
+table name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>json:
+the json string of key value composed of string type.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Return<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>Return 1 success, return 0 failure.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>pelagia.Del<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>Command to delete an existing key. Keys
+that do not exist are ignored.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Grammar<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>number pelagia.Del(string
+table, string key);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>Parameter<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>table:
+table name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>key: key
+value name.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Return<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>Return 1 success, return 0 failure.</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>pelagia.SetIfNoExit<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Set the
+value of the key only if the key does not exist.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Grammar<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>number pelagia.SetIfNoExit(string
+table, string key, string value);</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Parameter<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>table:
+table name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>key: key
+value name.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Return<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>Return 1 success, return 0 failure.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>pelagia.TableClear<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Empty
+list.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Grammar<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>pelagia.TableClear(string
+table);</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Parameter<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>table:
+table name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>pelagia.Rename<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Modify
+the name of key</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Grammar<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>number pelagia.Rename(string
+table, string key, string newKey);</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Parameter<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>table:
+table name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>key: key
+name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>newKey:
+new key name.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Return<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>Return 1 success, return 0 failure.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Pelagia.Get<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Gets the
+value of the specified key.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Grammar<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>string pelagia.Get(string
+table, string key);</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Parameter<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>table:
+table name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>key: key
+name.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Return<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Point to
+the json string whose value consists of key-value.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>pelagia.Length<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>Return table length</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Grammar<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>number pelagia.Length(string
+table);</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Parameter<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>table:
+table name.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Return<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>table
+length.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>IsKeyExist<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Check
+whether the given key exists.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Grammar<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>number pelagia.IsKeyExist(string
+table, string key);</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Parameter<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>table:
+table name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>key: key
+name.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Return<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>1
+exists, 0 does not exist</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>pelagia.Limite<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Returns
+a specified number of data sets on the left and right sides of a specified
+building.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Grammar<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>pelagia.Limite(string
+table, string key, number left, number right);</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Parameter<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>table:
+table name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>key: key
+name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>left:
+the number on the left.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>right :
+the number on the right.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>return<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>JSON of
+data collection</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>pelagia.Order<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Returns
+the specified number of data sets in the header or footer.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Grammar<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>pelagia.Order(string
+table, number order, number limite);</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Parameter<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>table:
+table name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>order: 0
+is the header and 1 is the footer.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>json:
+the json string of key value composed of string type.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>return<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>JSON of
+data collection</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>pelagia.Rang<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Returns
+data specifying two key intervals.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Grammar<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>pelagia.Rang(string table, string beginKey,
+number beginKeyLen, string endKey);<b style='mso-bidi-font-weight:normal'><o:p></o:p></b></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>table:
+table name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>beginKey:
+the start key name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>endKey:
+the ending key name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>return<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>JSON of
+data collection</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>pelagia.Point<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Returns
+data specifying point key intervals.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Grammar<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>pelagia.Rang(string table, string beginKey,
+number beginKeyLen, number dirtction, number offset);<b style='mso-bidi-font-weight:
+normal'><o:p></o:p></b></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>table:
+table name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>dirtction:
+Before and after the specified key. 0 or 1.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>offset: Specify
+the offset of the key.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>return<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>JSON of
+data collection</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>pelagia.Pattern<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Press
+the pattern search key.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Grammar<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>pelagia.Pattern(string
+table, string beginKey, number beginKeyLen, string endKey, string pattern, number
+patternLen);</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Parameter<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>table:
+table name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>beginKey:
+the start key name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>endKey:
+the ending key name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>pattern:
+pattern matching character.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>json:
+the json string of key value composed of string type.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>return<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>JSON of
+data collection</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>pelagia.MultiGet<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Get
+multiple key values.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Grammar<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>pelagia.MultiGet(string
+table, string keyJson, string valueJson);</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Parameter<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>table:
+table name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>keyJson:
+a json that stores multiple keys.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>valueJson:
+a jsonthat stores multiple key-values.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>return<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>JSON of
+data collection</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>pelagia.Rand<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Get a
+value at random.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Grammar<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>string pelagia.Rand(string
+table, number* valueLen);</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Parameter<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>table:
+table name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>key: key
+name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>return<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>JSON of
+data collection</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>Set API<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>pelagia.SetAdd<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Add one
+or more members to the collection.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Grammar<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>number pelagia.SetAdd(string
+table, string key, string value);</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Parameter<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>table:
+table name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>key: key
+name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>value: a
+pointer to a value.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Return<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>Return 1 success, return 0 failure.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Example<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>pelagia.SetMove<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>Move member elements from the source set to
+the destination set</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Grammar<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>pelagia.SetMove(string
+table, string srcKey, string desKey, string value);</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Parameter<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>table:
+table name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>srcKey:
+source key name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>desKey:
+destination key name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>value: a
+pointer to a value.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>pelagia.SetPop<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Remove
+and return a random element in the collection.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Grammar<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>string pelagia.SetPop(string
+table, string key);</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Parameter<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>table:
+table name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>key: key
+name.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Return<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Point to
+the json string whose value consists of key-value.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>pelagia.SetDel<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Move
+member elements from the source set to the destination set.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Grammar<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>pelagia.SetDel(string
+table, string key, string valueJson);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>table:
+table name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>key: key
+name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>valueJson:
+a jsonthat stores multiple key-values.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>pelagia.SetUionStore<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Remove
+and return a random element in the collection.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Grammar<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>pelagia.SetUionStore(string
+table, string keyJson, string key);</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Parameter<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>table: table
+name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>keyJson:
+a json that stores multiple keys.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>key: the
+specified key used for storage.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>pelagia.SetInterStore<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Intersection
+of all given sets and stored in the specified key set.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Grammar<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>pelagia.SetInterStore(string
+table, string keyJson, string key);</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Parameter<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>table:
+table name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>keyJson:
+a json that stores multiple keys.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>key: the
+specified key used for storage.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>pelagia.SetDiffStore<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>The
+difference set of all the given sets and stored in the specified key set.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Grammar<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;</span>pelagia.SetDiffStore(string table, string
+keyJson, string key);</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Parameter<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>table:
+table name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>keyJson:
+a json that stores multiple keys.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>key: the
+specified key used for storage.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>pelagia.SetRang<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Returns
+data specifying two key intervals.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Grammar<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>pelagia.SetRang(string
+table, string key, string beginValue, string endValue);</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Parameter<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>table:
+table name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>key: key
+name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>beginValue:
+the start key name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>endValue:
+the ending key name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>return<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>JSON of
+data collection</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>pelagia.SetLimite<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>Returns a specified number of data sets on
+the left and right sides of a specified building.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Grammar<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>pelagia.SetLimite(string
+table, string key, string value, number left, number right);</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Parameter<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>table:
+table name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>key: key
+name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>value:
+key name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Left:
+the number on the left.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>right :
+the number on the right.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>return<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>JSON of
+data collection</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>pelagia.SetLength<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Return
+set length</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Grammar<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>number pelagia.SetLength(string
+table, string key);</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Parameter<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>table:
+table name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>key: key
+name.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Return<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>table
+length</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>pelagia.SetIsKeyExist<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Check
+whether the given value exists.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Grammar<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>number pelagia.SetIsKeyExist(string
+table, string key, string value);</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Parameter<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>table:
+table name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>key: key
+name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Value:
+key name.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Return<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>1
+exists, 0 does not exist</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>pelagia.SetMembers<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Returns
+all data in the collection.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Grammar<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>pelagia.SetMembers(string
+table, string key);</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Parameter<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>table:
+table name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>key: key
+name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>return<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>JSON of
+data collection</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>pelagia.SetRand<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Returns
+a random number in a collection.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Grammar<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>string pelagia.SetRand(string
+table, string key, number* valueLen);</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Parameter<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>table: table
+name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>key: key
+name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>value: a
+pointer to a value.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>return<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>JSON of
+data collection</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>pelagia.SetRangCount<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Returns
+the number of values for a specified interval.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Grammar<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>number pelagia.SetRangCount(string
+table, string key, string beginValue, string endValue);</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Parameter<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>table: table name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>key: key
+name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>beginValue:
+the start key name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>endValue:
+the ending key name.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Return<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Return
+count.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>pelagia.SetUion<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Union of
+all given sets and stored in the specified key set.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Grammar<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>pelagia.SetUion(string
+table, string keyJson, string keyJson);</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Parameter<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>table:
+table name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>keyJson:
+a json that stores multiple keys.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>return<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>JSON of
+data collection</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>pelagia.SetInter<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Intersection
+of all given sets and stored in the specified key set.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Grammar<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>pelagia.SetInter
+(string table, string keyJson);</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Parameter<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>table:
+table name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>keyJson:
+a json that stores multiple keys.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>return<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>JSON of
+data collection</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>pelagia.SetDiff<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>The
+difference set of all the given sets and stored in the specified key set.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Grammar<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>pelagia.SetDiff
+(string table, string keyJson);</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Parameter<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>table:
+table name.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>keyJson:
+a json that stores multiple keys.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>return<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>JSON of
+data collection</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>Event API<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Function
+module for asynchronous communication between user and system. Created in user
+state. Used to send messages inside the system to outside the system. It is not
+recommended that users use this module to send messages inside the system.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>EventSend<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Send
+data to message queue.</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Grammar<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>string EventSend(string
+handle, string v);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US>Parameter<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>handle:
+Event handle encrypted by Base64.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>v: Message
+value</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Return<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>NULL</span></p>
+
+</div>
+
+</body>
+
+</html>
